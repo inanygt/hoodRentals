@@ -1,0 +1,76 @@
+<!-- Button --- what are you looking for?  -->
+<button type="button" id="mainBtn" class="btn" (click)="open(content)">
+  <i class="fa-solid fa-magnifying-glass"></i> What are you looking for?
+</button>
+
+<!-- MODAL ——— MODAL ——— MODAL -->
+
+<ng-template #content let-modal class="custom-modal">
+  <!-- Modal header -->
+  <div class="modal-header">
+    <div class="input-group mb-3">
+      <input
+        type="text"
+        class="form-control font-awesome"
+        placeholder="&#xF002; Wat zoek je?"
+        aria-label="Recipient's username"
+        aria-describedby="button-addon2"
+      />
+      <input
+        type="text"
+        class="form-control font-awesome"
+        placeholder="&#xf041; Locatie"
+        aria-label="Recipient's username"
+        aria-describedby="button-addon2"
+      />
+      <button
+        class="btn btn-outline-secondary btn-search-modal"
+        type="button"
+        id="button-addon2"
+      >
+        Zoeken
+      </button>
+    </div>
+  </div>
+  <!-- Modal Body -->
+  <div class="modal-body">
+    <form>
+      <!-- Categories in modal  -->
+      <div class="row">
+        <div *ngFor="let category of categories" class="col-lg-4 mb-3">
+          <div class="card">
+            <div class="row g-0">
+              <div class="col-2 img-wrap-modal">
+                <img
+                  src="{{ category.image }}"
+                  class="img-fluid rounded-start img-modal"
+                  alt="..."
+                />
+              </div>
+              <div class="col-8 d-flex align-items-center">
+                <div class="card-body">
+                  <h5 class="card-custom-title">
+                    {{ category.name }}
+                  </h5>
+                </div>
+              </div>
+              <div
+                class="col-2 col-arrow-right d-flex align-items-center justify-content-center"
+              >
+                <span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </form>
+  </div>
+</ng-template>
+
+<div class="introPage">
+  <h1>Goed om te delen</h1>
+  <h2>Leen en huur spullen van je buren</h2>
+  <button type="btn" id="btn-buurt" class="btn">Doe mee in jouw buurt</button>
+</div>
