@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
+import { CommonModule } from '@angular/common';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -20,6 +21,9 @@ import { MatListModule } from '@angular/material/list';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToolsComponent } from './tools/tools.component';
 import { FooterComponent } from './footer/footer.component';
+import { BeeldGeluidComponent } from './beeld-geluid/beeld-geluid.component';
+import { StackedModalComponent } from './stacked-modal/stacked-modal.component';
+import { HomeComponent } from './home/home.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +32,9 @@ import { FooterComponent } from './footer/footer.component';
     LookingForComponent,
     ToolsComponent,
     FooterComponent,
+    BeeldGeluidComponent,
+    StackedModalComponent,
+    HomeComponent,
   ],
   imports: [
     BrowserModule,
@@ -40,6 +47,7 @@ import { FooterComponent } from './footer/footer.component';
     MatListModule,
     NgbModule,
     HttpClientModule,
+    CommonModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

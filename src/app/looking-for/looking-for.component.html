@@ -38,39 +38,35 @@
       <!-- Categories in modal  -->
       <div class="row">
         <div *ngFor="let category of categories" class="col-lg-4 mb-3">
-          <div class="card">
-            <div class="row g-0">
-              <div class="col-2 img-wrap-modal">
-                <img
-                  src="{{ category.image }}"
-                  class="img-fluid rounded-start img-modal"
-                  alt="..."
-                />
-              </div>
-              <div class="col-8 d-flex align-items-center">
-                <div class="card-body">
-                  <h5 class="card-custom-title">
-                    {{ category.name }}
-                  </h5>
+          <a href="" class="btn-card">
+            <div class="card">
+              <div class="row g-0">
+                <div class="col-2 col-md-1 col-lg-2 img-wrap-modal">
+                  <img
+                    src="{{ category.image }}"
+                    class="img-fluid rounded-start img-modal"
+                    alt="..."
+                  />
+                </div>
+                <div class="col-8 d-flex align-items-center">
+                  <div class="card-body">
+                    <h5 class="card-custom-title">
+                      {{ category.name }}
+                    </h5>
+                  </div>
+                </div>
+                <div
+                  class="col-2 col-arrow-right d-flex align-items-center justify-content-center"
+                >
+                  <span class="material-symbols-outlined">
+                    arrow_forward_ios
+                  </span>
                 </div>
               </div>
-              <div
-                class="col-2 col-arrow-right d-flex align-items-center justify-content-center"
-              >
-                <span class="material-symbols-outlined">
-                  arrow_forward_ios
-                </span>
-              </div>
             </div>
-          </div>
+          </a>
         </div>
       </div>
     </form>
   </div>
 </ng-template>
-
-<div class="introPage">
-  <h1>Goed om te delen</h1>
-  <h2>Leen en huur spullen van je buren</h2>
-  <button type="btn" id="btn-buurt" class="btn">Doe mee in jouw buurt</button>
-</div>

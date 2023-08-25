@@ -13,5 +13,78 @@ body {
 /* Modal looking for */
 
 .modal {
+  height: 95vh;
   --bs-modal-width: 80%;
+}
+
+/* STACKED MODAL */
+
+.btn-card {
+  text-decoration: none;
+}
+
+.introPage {
+  display: flex;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  flex-direction: column;
+  height: 60vh;
+}
+
+#btn-buurt {
+  background-color: #00916e;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+/* Additional styling for the elements */
+.introPage h1,
+.introPage h2,
+.introPage button {
+  margin: 10px 0; /* Add spacing between elements */
+}
+
+.card-custom-title {
+  font-size: 12px;
+  margin-top: 10px;
+}
+
+.fa-arrow-right {
+  font-size: 3rem;
+}
+
+/* Arrow google font io */
+.material-symbols-outlined {
+  font-size: 1.5rem;
+}
+
+.col-arrow-right {
+  text-align: right;
+}
+
+.font-awesome {
+  font-family: "Helvetica", FontAwesome, sans-serif;
+}
+
+.btn-search-modal {
+  background-color: #00916e;
+  color: white;
+}
+
+.img-wrap-modal {
+  padding: 10px;
+}
+
+.img-modal {
+  width: 50px;
+}
+
+.modal-category:hover {
+  cursor: pointer;
+}
+
+.modal-title {
+  margin-top: 1rem;
+  font-size: 1rem;
+  font-weight: 700;
 }

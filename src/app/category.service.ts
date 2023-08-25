@@ -14,4 +14,8 @@ export class CategoryService {
   getCategories(): Observable<any> {
     return this.http.get(this.url + '/categories');
   }
+
+  getCategoryData(categoryId: number): Observable<any> {
+    return this.http.get(this.url + '/category/' + categoryId); // Adjust your API endpoint
+  }
 }
