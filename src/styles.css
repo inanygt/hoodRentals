@@ -84,7 +84,8 @@ body {
 }
 
 .modal-title {
-  margin-top: 1rem;
+  margin-top: 2rem;
+  margin-bottom: 1rem;
   font-size: 1rem;
   font-weight: 700;
 }

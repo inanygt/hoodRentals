@@ -157,8 +157,22 @@ export class NgbdModal1Content implements OnInit {
       </div>
     </div>
     <!-- Modal Title -->
-    <div class="modal-title d-flex align-items-center justify-content-center">
-      {{ category.name }}
+    <div class="modal-title d-flex align-items-center ">
+      <div class="col">
+        <button
+          type="button"
+          class="btn"
+          aria-label="Close"
+          (click)="activeModal.dismiss('Cross click')"
+        >
+          <i class="fa-solid fa-arrow-left"></i>
+        </button>
+      </div>
+      <div class="col d-flex align-items-center justify-content-center">
+        {{ category.name }}
+      </div>
+      <div class="col"></div>
+      <!-- Close button -->
     </div>
     <div class="modal-body">
       <form>
