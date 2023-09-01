@@ -1,9 +1,15 @@
 <div class="footer">
   <div class="row row-footer">
-    <div class="col"><i class="fa-solid fa-house footer-icons"></i></div>
+    <div class="col">
+      <i class="fa-solid fa-house footer-icons" (click)="open()"></i>
+    </div>
     <div class="col">
       <i class="fa-solid fa-magnifying-glass footer-icons"></i>
     </div>
-    <div class="col"><i class="fa-regular fa-user footer-icons"></i></div>
+    <div class="col">
+      <a routerLink="/profile"
+        ><i class="fa-regular fa-user footer-icons"></i
+      ></a>
+    </div>
   </div>
 </div>

@@ -19,3 +19,7 @@
 .col {
   text-align: center;
 }
+
+.footer-icons {
+  cursor: pointer;
+}

@@ -26,10 +26,12 @@ export class StackedModalComponent implements OnInit {
   ) {}
 
   open() {
-    this.modalService.open(NgbdModal1Content);
     const modalOptions: NgbModalOptions = {
-      animation: true, // Set animation property to true
+      animation: true,
+      backdrop: false,
     };
+
+    this.modalService.open(NgbdModal1Content, modalOptions);
   }
 
   ngOnInit(): void {}
@@ -114,7 +116,11 @@ export class NgbdModal1Content implements OnInit {
   ) {}
 
   open(category: any) {
-    const modalRef = this.modalService.open(NgbdModal2Content);
+    const modalOptions: NgbModalOptions = {
+      animation: true,
+      backdrop: false,
+    };
+    const modalRef = this.modalService.open(NgbdModal2Content, modalOptions);
     modalRef.componentInstance.category = category;
   }
 
