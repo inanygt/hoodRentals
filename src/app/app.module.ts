@@ -29,6 +29,7 @@ import { AllProductsComponent } from './all-products/all-products.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CommentsComponent } from './comments/comments.component';
+import { BeschikbaarComponent } from './beschikbaar/beschikbaar.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { CommentsComponent } from './comments/comments.component';
     DashboardComponent,
     ProfileComponent,
     CommentsComponent,
+    BeschikbaarComponent,
   ],
   imports: [
     BrowserModule,

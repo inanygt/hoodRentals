@@ -1,0 +1,13 @@
+.outer-container {
+  background-color: white;
+  height: 30vh;
+  display: flex;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  flex-direction: column;
+}
+
+.inner-container {
+  max-width: 80%;
+  text-align: center;
+}

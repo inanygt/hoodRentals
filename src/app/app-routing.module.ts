@@ -4,6 +4,7 @@ import { HomeComponent } from './home/home.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CommentsComponent } from './comments/comments.component';
 import { ProfileComponent } from './profile/profile.component';
+import { StackedModalComponent } from './stacked-modal/stacked-modal.component';
 
 const routes: Routes = [
   {
@@ -13,6 +14,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent },
   { path: 'comments', component: CommentsComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'search', component: StackedModalComponent },
 ];
 
 @NgModule({

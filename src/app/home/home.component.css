@@ -1,0 +1,37 @@
+.intro-page {
+  display: flex;
+  justify-content: center; /* Center vertically */
+  align-items: center; /* Center horizontally */
+  flex-direction: column;
+  height: 90vh;
+}
+
+#btn-buurt {
+  background-color: #00916e;
+  color: white;
+  padding: 0.5rem 1rem;
+}
+
+/* Additional styling for the elements */
+.introPage h1,
+.introPage h2,
+.introPage button {
+  margin: 10px 0; /* Add spacing between elements */
+}
+
+.logo {
+  font-weight: 500;
+}
+
+.goed-delen {
+  margin-bottom: 0rem;
+  font-weight: 500;
+}
+
+.leen-en-huur {
+  padding-top: -1rem;
+}
+
+.doe-mee-btn {
+  margin-top: 3rem;
+}

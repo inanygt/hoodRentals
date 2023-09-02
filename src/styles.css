@@ -23,27 +23,6 @@ body {
   text-decoration: none;
 }
 
-.introPage {
-  display: flex;
-  justify-content: center; /* Center vertically */
-  align-items: center; /* Center horizontally */
-  flex-direction: column;
-  height: 60vh;
-}
-
-#btn-buurt {
-  background-color: #00916e;
-  color: white;
-  padding: 0.5rem 1rem;
-}
-
-/* Additional styling for the elements */
-.introPage h1,
-.introPage h2,
-.introPage button {
-  margin: 10px 0; /* Add spacing between elements */
-}
-
 .card-custom-title {
   font-size: 12px;
   margin-top: 10px;

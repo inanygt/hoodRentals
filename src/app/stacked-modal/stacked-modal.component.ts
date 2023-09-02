@@ -29,6 +29,7 @@ export class StackedModalComponent implements OnInit {
     const modalOptions: NgbModalOptions = {
       animation: true,
       backdrop: false,
+      fullscreen: 'xxl',
     };
 
     this.modalService.open(NgbdModal1Content, modalOptions);
@@ -119,6 +120,7 @@ export class NgbdModal1Content implements OnInit {
     const modalOptions: NgbModalOptions = {
       animation: true,
       backdrop: false,
+      fullscreen: 'xxl',
     };
     const modalRef = this.modalService.open(NgbdModal2Content, modalOptions);
     modalRef.componentInstance.category = category;
