@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { Router } from '@angular/router';
 
@@ -16,14 +16,18 @@ import { CategoryService } from '../category.service';
   styleUrls: ['./footer.component.css'],
 })
 export class FooterComponent implements OnInit {
-  // Methods
-  // refreshPage() {
-  //   location.reload();
-  // }
-
   home() {
     console.log('home');
     window.location.href = '/home';
+  }
+
+  subscribe() {
+    const modalOptions: NgbModalOptions = {
+      size: 'lg',
+    };
+
+    const modalRef = this.modalService.open(NgbdModalContent, modalOptions);
+    modalRef.componentInstance.name = 'World';
   }
 
   modalsNumber = 0;
@@ -257,4 +261,39 @@ export class NgbdModal2Content implements OnInit {
       }
     );
   }
+}
+
+// Profile modal // Profile modal // Profile modal
+
+@Component({
+  selector: 'ngbd-modal-content',
+  standalone: true,
+  template: `
+    <div class="modal-header modal-header-profile ">
+      <h4 class="modal-title">Hi there!</h4>
+      <button
+        type="button"
+        class="btn-close"
+        aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <p>Hello, {{ name }}!</p>
+    </div>
+    <div class="modal-footer">
+      <button
+        type="button"
+        class="btn btn-outline-dark"
+        (click)="activeModal.close('Close click')"
+      >
+        Close
+      </button>
+    </div>
+  `,
+})
+export class NgbdModalContent {
+  @Input() name: any;
+
+  constructor(public activeModal: NgbActiveModal) {}
 }
