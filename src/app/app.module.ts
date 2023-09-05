@@ -30,6 +30,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { ProfileComponent } from './profile/profile.component';
 import { CommentsComponent } from './comments/comments.component';
 import { BeschikbaarComponent } from './beschikbaar/beschikbaar.component';
+import { VoorwaardenComponent } from './voorwaarden/voorwaarden.component';
 
 @NgModule({
   declarations: [
@@ -46,6 +47,7 @@ import { BeschikbaarComponent } from './beschikbaar/beschikbaar.component';
     ProfileComponent,
     CommentsComponent,
     BeschikbaarComponent,
+    VoorwaardenComponent,
   ],
   imports: [
     BrowserModule,

@@ -129,7 +129,8 @@ export class NgbdModal1Content implements OnInit {
   constructor(
     private modalService: NgbModal,
     public activeModal: NgbActiveModal,
-    private CategoryService: CategoryService
+    private CategoryService: CategoryService,
+    private router: Router
   ) {}
 
   open(category: any) {
@@ -244,7 +245,8 @@ export class NgbdModal2Content implements OnInit {
 
   constructor(
     public activeModal: NgbActiveModal,
-    private CategoryService: CategoryService
+    private CategoryService: CategoryService,
+    private router: Router
   ) {}
 
   open() {
@@ -269,20 +271,6 @@ export class NgbdModal2Content implements OnInit {
   selector: 'ngbd-modal-content',
   standalone: true,
   template: `
-    <!-- <div class="modal-header modal-header-profile ">
-      <h4 class="modal-title">Hi there!</h4>
-      <button
-        type="button"
-        class="btn-close"
-        aria-label="Close"
-        (click)="activeModal.dismiss('Cross click')"
-      ></button>
-    </div>
-    <div class="modal-body">
-      <p>Hello, {{ name }}!</p>
-    </div>
-    <div class="modal-footer"></div> -->
-
     <div class="modal-header modal-header-profile ">
       <div class="modal-title-profile">
         <h1>Schrijf je in</h1>
@@ -329,7 +317,9 @@ export class NgbdModal2Content implements OnInit {
       <!-- Footer voorwaarden -->
       <div class="footer-voorwaarden">
         Door je in te schrijven ga je akkoord met de <br />
-        <a href=""> Algemene voorwaarden</a>
+        <a class="navigate-voorwaarden" (click)="navigateToVoorwaarden()">
+          Algemene voorwaarden</a
+        >
       </div>
     </div>
     <!-- Modal Footer -->
@@ -343,5 +333,10 @@ export class NgbdModal2Content implements OnInit {
 export class NgbdModalContent {
   @Input() name: any;
 
-  constructor(public activeModal: NgbActiveModal) {}
+  navigateToVoorwaarden() {
+    this.router.navigate(['/voorwaarden']);
+    this.activeModal.close();
+  }
+
+  constructor(public activeModal: NgbActiveModal, private router: Router) {}
 }
