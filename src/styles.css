@@ -73,6 +73,52 @@ body {
 
 .modal-header-profile {
   display: flex;
+  justify-content: center;
+  height: 80px;
+}
+
+.modal-title-profile {
+  color: black;
+  font-weight: 900 !important;
+  padding-top: 1rem;
+}
+
+.btn-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+}
+
+.profile-checkbox {
+  color: gray;
+  padding: 0.4rem 0 0.4rem 0;
+}
+
+.wrap-form-check {
+  display: flex;
   align-items: center;
   justify-content: center;
+  background-color: lightgrey;
+  margin-bottom: 0.6rem;
+  border-radius: 5px;
+}
+
+.btn-schrijf {
+  width: 100%;
+}
+
+.footer-voorwaarden {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+  margin: 0.7rem 0rem 0rem 0rem;
+  color: black;
+}
+
+.modal-footer {
+  display: flex;
+  justify-content: center;
+  font-size: 1rem;
+  color: gray;
 }

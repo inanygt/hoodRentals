@@ -269,7 +269,7 @@ export class NgbdModal2Content implements OnInit {
   selector: 'ngbd-modal-content',
   standalone: true,
   template: `
-    <div class="modal-header modal-header-profile ">
+    <!-- <div class="modal-header modal-header-profile ">
       <h4 class="modal-title">Hi there!</h4>
       <button
         type="button"
@@ -281,14 +281,62 @@ export class NgbdModal2Content implements OnInit {
     <div class="modal-body">
       <p>Hello, {{ name }}!</p>
     </div>
-    <div class="modal-footer">
+    <div class="modal-footer"></div> -->
+
+    <div class="modal-header modal-header-profile ">
+      <div class="modal-title-profile">
+        <h1>Schrijf je in</h1>
+      </div>
       <button
         type="button"
-        class="btn btn-outline-dark"
-        (click)="activeModal.close('Close click')"
-      >
-        Close
+        class="btn-close"
+        aria-label="Close"
+        (click)="activeModal.dismiss('Cross click')"
+      ></button>
+    </div>
+    <div class="modal-body">
+      <!-- Email adres -->
+      <div class="mb-3">
+        <label for="exampleFormControlInput1" class="form-label"
+          >Email address</label
+        >
+        <input
+          type="email"
+          class="form-control"
+          id="exampleFormControlInput1"
+          placeholder="name@email.com"
+        />
+      </div>
+      <!-- Profile nieuwtjes -->
+      <div class="wrap-form-check">
+        <div class="form-check form-check-reverse profile-checkbox">
+          <input
+            class="form-check-input"
+            type="checkbox"
+            value=""
+            id="reverseCheck1"
+          />
+          <label class="form-check-label" for="reverseCheck1">
+            Hou mij op de hoogte van Peerby nieuwtjes
+            <i class="fa-solid fa-heart"></i>
+          </label>
+        </div>
+      </div>
+      <!-- Btn schrijf je in email -->
+      <button type="button" class="btn btn-primary btn-schrijf">
+        Schrijf je in met email
       </button>
+      <!-- Footer voorwaarden -->
+      <div class="footer-voorwaarden">
+        Door je in te schrijven ga je akkoord met de <br />
+        <a href=""> Algemene voorwaarden</a>
+      </div>
+    </div>
+    <!-- Modal Footer -->
+    <div class="modal-footer">
+      <div class="modal-footer-profile">
+        Heb je al een account? <a href=""> Inloggen</a>
+      </div>
     </div>
   `,
 })
