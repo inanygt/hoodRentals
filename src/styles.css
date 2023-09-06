@@ -17,6 +17,10 @@ body {
   --bs-modal-width: 80%;
 }
 
+.modal-body {
+  background-color: white;
+}
+
 /* STACKED MODAL */
 
 .btn-card {

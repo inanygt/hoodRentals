@@ -31,6 +31,9 @@ import { ProfileComponent } from './profile/profile.component';
 import { CommentsComponent } from './comments/comments.component';
 import { BeschikbaarComponent } from './beschikbaar/beschikbaar.component';
 import { VoorwaardenComponent } from './voorwaarden/voorwaarden.component';
+import { ModalCategoryComponent } from './modal-category/modal-category.component';
+import { ModalSubCategoryComponent } from './modal-sub-category/modal-sub-category.component';
+import { SearchComponent } from './search/search.component';
 
 @NgModule({
   declarations: [
@@ -48,6 +51,9 @@ import { VoorwaardenComponent } from './voorwaarden/voorwaarden.component';
     CommentsComponent,
     BeschikbaarComponent,
     VoorwaardenComponent,
+    ModalCategoryComponent,
+    ModalSubCategoryComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,
