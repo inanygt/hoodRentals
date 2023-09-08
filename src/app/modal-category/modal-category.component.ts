@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild, AfterViewInit } from '@angular/core';
 import { CategoryService } from '../category.service';
 import { ModalSubCategoryComponent } from '../modal-sub-category/modal-sub-category.component';
 
@@ -19,10 +19,9 @@ export class ModalCategoryComponent implements OnInit {
 
   constructor(
     private modalService: NgbModal,
-    private CategoryService: CategoryService
+    private CategoryService: CategoryService,
+    public activeModal: NgbActiveModal
   ) {}
-
-  // Methods
 
   open(category: any) {
     const modalOptions: NgbModalOptions = {
@@ -40,7 +39,6 @@ export class ModalCategoryComponent implements OnInit {
   ngOnInit(): void {
     this.CategoryService.getCategories().subscribe((data: any) => {
       this.categories = data;
-      console.log(data);
     });
   }
 }

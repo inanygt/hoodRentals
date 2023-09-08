@@ -23,7 +23,6 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ToolsComponent } from './tools/tools.component';
 import { FooterComponent } from './footer/footer.component';
 import { BeeldGeluidComponent } from './beeld-geluid/beeld-geluid.component';
-import { StackedModalComponent } from './stacked-modal/stacked-modal.component';
 import { HomeComponent } from './home/home.component';
 import { AllProductsComponent } from './all-products/all-products.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
@@ -43,7 +42,6 @@ import { SearchComponent } from './search/search.component';
     ToolsComponent,
     FooterComponent,
     BeeldGeluidComponent,
-    StackedModalComponent,
     HomeComponent,
     AllProductsComponent,
     DashboardComponent,
