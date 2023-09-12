@@ -1,6 +1,12 @@
+.btn-container {
+  background-color: #feefe5;
+  padding: 0.7rem 0;
+  margin-bottom: 1rem;
+}
+
 #mainBtn {
   display: block;
-  margin: 1rem auto;
+  margin: 0rem auto;
   text-align: center;
   color: grey;
   background-color: white;

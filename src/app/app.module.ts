@@ -33,6 +33,7 @@ import { VoorwaardenComponent } from './voorwaarden/voorwaarden.component';
 import { ModalCategoryComponent } from './modal-category/modal-category.component';
 import { ModalSubCategoryComponent } from './modal-sub-category/modal-sub-category.component';
 import { SearchComponent } from './search/search.component';
+import { DashboardItemsHorizontalComponent } from './dashboard-items-horizontal/dashboard-items-horizontal.component';
 
 @NgModule({
   declarations: [
@@ -52,6 +53,7 @@ import { SearchComponent } from './search/search.component';
     ModalCategoryComponent,
     ModalSubCategoryComponent,
     SearchComponent,
+    DashboardItemsHorizontalComponent,
   ],
   imports: [
     BrowserModule,

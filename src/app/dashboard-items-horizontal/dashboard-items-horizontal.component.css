@@ -1,7 +1,3 @@
-.container {
-  background-color: white;
-}
-
 .container-dashboard {
   margin: 5px;
   width: 100%;
@@ -9,11 +5,12 @@
 }
 
 .item {
-  /* width: 120px; */
-  font-size: 13px;
-  padding: 0rem 0.9rem;
+  /* border: 2px solid #b85b14; */
+  /* background-color: #fc7307; */
+  width: 120px;
 }
 
+/* Flex */
 .flex {
   display: flex;
   flex-wrap: nowrap;
@@ -29,14 +26,4 @@
 
 .flex::-webkit-scrollbar-thumb {
   background-color: transparent;
-}
-
-.dashboard-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-}
-
-.dashboard-img-item {
-  width: 30px;
 }

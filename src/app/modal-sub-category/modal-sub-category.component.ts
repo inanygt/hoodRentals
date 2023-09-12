@@ -29,11 +29,13 @@ export class ModalSubCategoryComponent implements OnInit {
     private modalService: NgbModal
   ) {}
 
-  openSubCategory(subcategory: any) {
-    this.subCategoryInfo = subcategory;
+  openSubCategory(subcategoryId: number) {
+    // this.subCategoryInfo = subcategory;
     // console.log(this.subCategoryInfo);
+    // console.log(this.subCategoryInfo.id);
     this.modalService.dismissAll();
-    this.router.navigate(['/dashboard']);
+    // this.router.navigate(['/dashboard']);
+    this.router.navigate(['/dashboard/subcategory/', subcategoryId]);
 
     this.CategoryService.setSubCategory(this.subCategoryInfo);
   }

@@ -49,7 +49,7 @@
         *ngFor="let subcategory of category.subcategories"
         class="col-lg-4 mb-3"
       >
-        <div class="modal-category" (click)="openSubCategory(subcategory)">
+        <div class="modal-category" (click)="openSubCategory(subcategory.id)">
           <div class="card">
             <div class="row g-0">
               <div class="col-2 col-md-1 col-lg-2 img-wrap-modal">
