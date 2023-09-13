@@ -3,7 +3,7 @@
 }
 
 .container-dashboard {
-  margin: 5px;
+  margin-top: 2rem;
   width: 100%;
   white-space: nowrap;
 }
@@ -34,9 +34,12 @@
 .dashboard-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* align-items: flex-end; */
+  height: 60px;
 }
 
 .dashboard-img-item {
   width: 30px;
+  padding-bottom: 0.2rem;
+  margin: auto;
 }
