@@ -27,13 +27,13 @@ export class CategoryService {
     return this.http.get(this.apiUrl + '/subcategorywithsub/' + subCategoryId);
   }
 
-  setSubCategory(subCategoryInfo: any) {
-    this.subCategorySubject.next(subCategoryInfo);
-  }
+  // setSubCategory(subCategoryInfo: any) {
+  //   this.subCategorySubject.next(subCategoryInfo);
+  // }
 
-  getSubCategory(): Observable<any> {
-    return this.subCategorySubject.asObservable();
-  }
+  // getSubCategory(): Observable<any> {
+  //   return this.subCategorySubject.asObservable();
+  // }
 
   getSubSubCategories(id: number): Observable<any> {
     return this.http.get<any[]>(`${this.apiUrl}/subcategorywithsub/${id}`);

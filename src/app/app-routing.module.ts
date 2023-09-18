@@ -12,10 +12,15 @@ const routes: Routes = [
     path: 'home',
     component: HomeComponent,
   },
+  // {
+  //   path: 'dashboard/subcategory/:subcategoryId',
+  //   component: DashboardComponent,
+  // },
   {
-    path: 'dashboard/subcategory/:subcategoryId',
+    path: 'dashboard/:categoryId/subcategory/:subcategoryId',
     component: DashboardComponent,
   },
+
   { path: 'comments', component: CommentsComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'search', component: SearchComponent },

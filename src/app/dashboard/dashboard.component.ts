@@ -17,20 +17,21 @@ export class DashboardComponent implements OnInit {
   subcategories: any;
   subsubcategories: any;
 
+  categories: any;
+  category: any;
+
   subId: number = 0;
   id = 1;
 
   ngOnInit(): void {
     this.route.params.subscribe((params) => {
       const subcategoryId = params['subcategoryId'];
-      console.log(subcategoryId);
 
       // Get subcategories one to many relation
       this.categoryService
         .getSubSubCategories(subcategoryId)
         .subscribe((data) => {
           this.subcategories = data;
-          console.log(this.subcategories);
         });
     });
   }

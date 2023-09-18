@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../category.service';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 import {
   NgbActiveModal,
@@ -22,29 +22,35 @@ export class ModalSubCategoryComponent implements OnInit {
   subCategory: any;
   subCategoryInfo: any;
 
+  categoryId: number = 0;
+
   constructor(
     public activeModal: NgbActiveModal,
     private CategoryService: CategoryService,
     private router: Router,
+    private activatedRoute: ActivatedRoute,
     private modalService: NgbModal
   ) {}
 
   openSubCategory(subcategoryId: number) {
-    // this.subCategoryInfo = subcategory;
-    // console.log(this.subCategoryInfo);
-    // console.log(this.subCategoryInfo.id);
     this.modalService.dismissAll();
-    // this.router.navigate(['/dashboard']);
-    this.router.navigate(['/dashboard/subcategory/', subcategoryId]);
 
-    this.CategoryService.setSubCategory(this.subCategoryInfo);
+    this.router.navigate([
+      '/dashboard',
+      this.categoryId,
+      'subcategory',
+      subcategoryId,
+    ]);
+
+    // this.CategoryService.setSubCategory(this.subCategoryInfo);
   }
 
   ngOnInit(): void {
     this.CategoryService.getCategoryData(this.category.id).subscribe(
       (data: any) => {
         this.category = data;
-        console.log(data);
+        this.categoryId = this.category.id;
+        console.log(this.categoryId);
       }
     );
   }
