@@ -30,24 +30,49 @@
     </div>
     <!-- Alles row -->
     <h5>
-      <a href="">Alles </a> / <a href=""> {{ category }} </a> /
+      <a routerLink="/home">Alles </a> / <a href=""> {{ category.name }} </a> /
       <a href="">{{ subcategories.name }} </a>
     </h5>
-  </div>
-</div>
-
-<!-- Dashboard items  -->
-<div class="container container-dashboard flex">
-  <div *ngFor="let subsubcategory of subcategories.subsubcategory">
-    <div class="item flex-item">
-      <div class="dashboard-card">
-        <img
-          class="dashboard-img-item d-flex flex-column"
-          src="{{ subsubcategory.image }}"
-          alt=""
-        />
-        <div class="text-container">
-          {{ subsubcategory.name }}
+    <!-- Dashboard subsubcat items  -->
+    <div class="container container-dashboard flex">
+      <div *ngFor="let subsubcategory of subcategories.subsubcategory">
+        <div class="item flex-item">
+          <div class="dashboard-card">
+            <img
+              class="dashboard-img-item d-flex flex-column"
+              src="{{ subsubcategory.image }}"
+              alt=""
+            />
+            <div class="text-container">
+              {{ subsubcategory.name }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Items -->
+    <div *ngFor="let item of items" class="card mb-3">
+      <div class="row g-0">
+        <div class="col-4">
+          <img
+            src="https://www.kamera-express.nl/media/b11f7b40-03ae-4c42-9b89-e18d44229a2f/12309814_5.jpg"
+            class="img-fluid rounded-start img-card"
+            alt="..."
+          />
+        </div>
+        <div class="col-8">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.title }}</h5>
+            <div class="card-price">&#x20AC; {{ item.price_per_day }}</div>
+            <div class="card-user">
+              <img
+                class="profile-pic"
+                src="https://thumbs.dreamstime.com/z/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg?w=768"
+                alt=""
+              />
+              <div class="card-city">{{ item.city }}</div>
+            </div>
+          </div>
         </div>
       </div>
     </div>

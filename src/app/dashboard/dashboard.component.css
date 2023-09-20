@@ -2,6 +2,11 @@
   background-color: white;
 }
 
+.inner-container {
+  margin: 0 auto;
+  width: 95%;
+}
+
 .container-dashboard {
   margin-top: 2rem;
   width: 100%;
@@ -42,4 +47,19 @@
   width: 30px;
   padding-bottom: 0.2rem;
   margin: auto;
+}
+
+/* image card */
+
+.img-card {
+  padding: 20px;
+}
+
+.card-title {
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.profile-pic {
+  width: 40px;
 }
