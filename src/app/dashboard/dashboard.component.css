@@ -59,6 +59,18 @@
   font-size: 14px;
 }
 
-.profile-pic {
+.card-price {
+  font-weight: bold;
+  margin-top: 2rem;
+}
+
+.card-wrap-user {
+  display: flex;
+}
+
+.card-item {
+}
+
+.card-picture {
   width: 40px;
 }

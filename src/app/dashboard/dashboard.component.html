@@ -64,14 +64,19 @@
           <div class="card-body">
             <h5 class="card-title">{{ item.title }}</h5>
             <div class="card-price">&#x20AC; {{ item.price_per_day }}</div>
-            <div class="card-user">
-              <img
-                class="profile-pic"
-                src="https://thumbs.dreamstime.com/z/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg?w=768"
-                alt=""
-              />
-              <div class="card-user">{{ item.user_id }}</div>
-              <div class="card-city">{{ item.city }}</div>
+            <!-- Card wrap user -->
+            <div class="row card-wrap-user">
+              <div class="col-2">
+                <img
+                  class="card-picture card-item"
+                  src="https://thumbs.dreamstime.com/z/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg?w=768"
+                  alt=""
+                />
+              </div>
+              <div class="col">
+                <div class="card-user card-item">{{ item.user_id }}</div>
+                <div class="card-city card-item">{{ item.city }}</div>
+              </div>
             </div>
           </div>
         </div>
