@@ -39,7 +39,6 @@
 .dashboard-card {
   display: flex;
   flex-direction: column;
-  /* align-items: flex-end; */
   height: 60px;
 }
 

@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../category.service';
 import { ActivatedRoute } from '@angular/router';
 import { ItemService } from '../item.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -12,7 +13,8 @@ export class DashboardComponent implements OnInit {
   constructor(
     private categoryService: CategoryService,
     private itemService: ItemService,
-    private route: ActivatedRoute
+    private route: ActivatedRoute,
+    private userService: UserService
   ) {}
 
   // Categories
@@ -21,6 +23,8 @@ export class DashboardComponent implements OnInit {
   subCategory: any;
   subcategories: any;
   subsubcategories: any;
+
+  userId: number = 0;
 
   // Category ID
   items: any;
@@ -35,6 +39,15 @@ export class DashboardComponent implements OnInit {
       this.itemService.getSubItems(subcategoryId).subscribe((data) => {
         this.items = data;
         console.log(data);
+
+        // Iterate through items and fetch user names
+        this.items.forEach((item: any, index: any) => {
+          this.userService
+            .getUserById(item.user_id)
+            .subscribe((userData: any) => {
+              this.items[index].user_id = userData.name;
+            });
+        });
       });
 
       this.categoryService.getCategoryData(categoryId).subscribe((data) => {
