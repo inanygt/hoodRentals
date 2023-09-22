@@ -18,6 +18,10 @@ export class CategoryService {
     return this.http.get(this.apiUrl + '/categories');
   }
 
+  getItemsFromCat(categoryId: number): Observable<any> {
+    return this.http.get(this.apiUrl + '/items/cat/' + categoryId);
+  }
+
   // category with subcategories
   getCategoryData(categoryId: number): Observable<any> {
     return this.http.get(this.apiUrl + '/categorywithsub/' + categoryId);

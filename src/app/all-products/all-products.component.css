@@ -28,7 +28,6 @@
 }
 
 .item {
-  /* width: 120px; */
   font-size: 13px;
   padding: 0rem 0.9rem;
   border: 1px solid lightgray;
@@ -67,5 +66,19 @@
 
 /* CARDS */
 .card {
-  width: 50%;
+  width: 100%;
+  margin-bottom: 1rem;
+}
+
+.card-profile {
+  position: relative;
+}
+
+.card-price {
+  color: white;
+  font-weight: bold;
+  position: absolute;
+  bottom: 0px;
+  right: 0px;
+  padding: 5px 10px;
 }
