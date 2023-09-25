@@ -3,18 +3,20 @@
     <h1 class="vaak-gedeeld">Vaak gedeelde spullen</h1>
     <div class="container-dashboard flex">
       <div *ngFor="let category of categories">
-        <div class="item flex-item">
-          <div class="dashboard-card">
-            <img
-              class="dashboard-img-item d-flex flex-column"
-              src="{{ category.image }}"
-              alt=""
-            />
-            <div class="text-container">
-              {{ category.name }}
+        <a routerLink="/home" (click)="catRefresh(category.id)">
+          <div class="item flex-item">
+            <div class="dashboard-card">
+              <img
+                class="dashboard-img-item d-flex flex-column"
+                src="{{ category.image }}"
+                alt=""
+              />
+              <div class="text-container">
+                {{ category.name }}
+              </div>
             </div>
           </div>
-        </div>
+        </a>
       </div>
     </div>
     <!-- CARDS -->
