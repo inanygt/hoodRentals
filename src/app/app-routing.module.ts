@@ -6,16 +6,19 @@ import { CommentsComponent } from './comments/comments.component';
 import { ProfileComponent } from './profile/profile.component';
 import { VoorwaardenComponent } from './voorwaarden/voorwaarden.component';
 import { SearchComponent } from './search/search.component';
+import { BorrowLendContainerComponent } from './borrow-lend-container/borrow-lend-container.component';
+import { BorrowComponent } from './borrow-lend-container/borrow/borrow.component';
+import { LendComponent } from './borrow-lend-container/lend/lend.component';
 
 const routes: Routes = [
   {
     path: 'home',
     component: HomeComponent,
+    children: [
+      { path: 'borrow', component: BorrowComponent },
+      { path: 'lend', component: LendComponent },
+    ],
   },
-  // {
-  //   path: 'dashboard/subcategory/:subcategoryId',
-  //   component: DashboardComponent,
-  // },
   {
     path: 'dashboard/:categoryId/subcategory/:subcategoryId',
     component: DashboardComponent,

@@ -29,11 +29,10 @@ export class AllProductsComponent implements OnInit {
     // Get items from categories cards
     this.categoryService.getItemsFromCat(this.categoryId).subscribe((data) => {
       this.items = data;
-      console.log(data);
 
+      // Add corresponding user name to userId
       this.items.forEach((userId: number, index: any) => {
         this.userService.getUserById(this.userId).subscribe((data) => {
-          console.log(data);
           this.items[index].user_id = data.name;
         });
       });
@@ -47,6 +46,13 @@ export class AllProductsComponent implements OnInit {
     // update cards with new catId
     this.categoryService.getItemsFromCat(this.categoryId).subscribe((data) => {
       this.items = data;
+
+      // Add corresponding user name to userId
+      this.items.forEach((userId: number, index: any) => {
+        this.userService.getUserById(this.userId).subscribe((data) => {
+          this.items[index].user_id = data.name;
+        });
+      });
     });
   }
 }

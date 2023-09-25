@@ -1,22 +1,20 @@
 .container {
   background-color: white;
-}
-
-.inner-container {
-  margin: 0 auto;
-  width: 95%;
-}
-
-.vaak-gedeeld {
-  font-weight: bold;
-}
-
-.container {
   height: 100vh;
   display: flex;
   align-items: center;
   flex-direction: column;
   padding-top: 2rem;
+}
+
+.inner-container {
+  margin: 0 auto;
+  width: 95%;
+  padding-bottom: 3rem;
+}
+
+.vaak-gedeeld {
+  font-weight: bold;
 }
 
 /* horizontal categories */
@@ -29,7 +27,7 @@
 
 .item {
   font-size: 13px;
-  padding: 0rem 0.9rem;
+  padding: 0.9rem;
   border: 1px solid lightgray;
   border-radius: 5px;
   margin: 0 5px;
@@ -40,6 +38,7 @@
   flex-wrap: nowrap;
   overflow: auto;
 }
+
 .flex-item {
   flex: 0 0 auto;
 }
@@ -55,11 +54,13 @@
 .dashboard-card {
   display: flex;
   flex-direction: column;
-  height: 60px;
+  /* height: 60px; */
 }
 
 .dashboard-img-item {
-  width: 30px;
+  max-width: 30px;
+  max-height: 30px;
+
   padding-bottom: 0.2rem;
   margin: auto;
 }
@@ -111,4 +112,13 @@
 
 .card-picture {
   padding-right: 0.5rem;
+}
+
+.meer-voorbeelden {
+  margin: 2rem;
+}
+
+a {
+  text-decoration: none;
+  color: purple;
 }

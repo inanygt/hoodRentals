@@ -34,6 +34,9 @@ import { ModalCategoryComponent } from './modal-category/modal-category.componen
 import { ModalSubCategoryComponent } from './modal-sub-category/modal-sub-category.component';
 import { SearchComponent } from './search/search.component';
 import { DashboardItemsHorizontalComponent } from './dashboard-items-horizontal/dashboard-items-horizontal.component';
+import { BorrowLendContainerComponent } from './borrow-lend-container/borrow-lend-container.component';
+import { BorrowComponent } from './borrow-lend-container/borrow/borrow.component';
+import { LendComponent } from './borrow-lend-container/lend/lend.component';
 
 @NgModule({
   declarations: [
@@ -54,6 +57,9 @@ import { DashboardItemsHorizontalComponent } from './dashboard-items-horizontal/
     ModalSubCategoryComponent,
     SearchComponent,
     DashboardItemsHorizontalComponent,
+    BorrowLendContainerComponent,
+    BorrowComponent,
+    LendComponent,
   ],
   imports: [
     BrowserModule,
