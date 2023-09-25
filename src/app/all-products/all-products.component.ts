@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../category.service';
+import { UserService } from '../user.service';
 
 @Component({
   selector: 'app-all-products',
@@ -11,8 +12,14 @@ export class AllProductsComponent implements OnInit {
   items: any;
   catId: any;
   categoryId: number = 1;
+  userId: number = 1;
 
-  constructor(private categoryService: CategoryService) {}
+  item: any;
+
+  constructor(
+    private categoryService: CategoryService,
+    private userService: UserService
+  ) {}
   ngOnInit(): void {
     this.categoryService.getCategories().subscribe((data) => {
       console.log(data);
@@ -22,11 +29,18 @@ export class AllProductsComponent implements OnInit {
     // Get items from categories cards
     this.categoryService.getItemsFromCat(this.categoryId).subscribe((data) => {
       this.items = data;
+      console.log(data);
+
+      this.items.forEach((userId: number, index: any) => {
+        this.userService.getUserById(this.userId).subscribe((data) => {
+          console.log(data);
+          this.items[index].user_id = data.name;
+        });
+      });
     });
   }
 
   catRefresh(catId: number) {
-    // event.preventDefault();
     this.categoryId = catId;
     console.log(this.categoryId);
 

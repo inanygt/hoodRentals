@@ -14,7 +14,7 @@
 .container {
   height: 100vh;
   display: flex;
-  align-items: center; /* Center horizontally */
+  align-items: center;
   flex-direction: column;
   padding-top: 2rem;
 }
@@ -66,8 +66,20 @@
 
 /* CARDS */
 .card {
-  width: 100%;
-  margin-bottom: 1rem;
+  text-align: left;
+  /* height: 300px; */
+}
+
+.card-body {
+  padding: 0.5rem;
+}
+
+.card-title {
+  font-weight: bold;
+}
+
+.col {
+  padding: 0rem 0.2rem;
 }
 
 .card-profile {
@@ -81,4 +93,22 @@
   bottom: 0px;
   right: 0px;
   padding: 5px 10px;
+}
+
+.row > * {
+  padding-right: 0px;
+  padding-left: 0px;
+}
+
+.card-wrap-user {
+  display: flex;
+  padding: 0rem 0.5rem;
+}
+
+.card-picture {
+  width: 40px;
+}
+
+.card-picture {
+  padding-right: 0.5rem;
 }

@@ -21,9 +21,9 @@
     </div>
     <!-- CARDS -->
 
-    <div class="container">
-      <div class="row">
-        <div *ngFor="let item of items" class="col-6">
+    <div class="row gy-2">
+      <div *ngFor="let item of items" class="col-6 col-md-4 col-xl-3">
+        <div class="col">
           <div class="card">
             <div class="card-profile">
               <img
@@ -34,8 +34,21 @@
               <div class="card-price">&euro;{{ item.price_per_day }}</div>
             </div>
             <div class="card-body">
-              {{ item.title }}
-              <p class="card-text"></p>
+              <div class="card-title">{{ item.title }}</div>
+              <!-- Card wrap user -->
+              <div class="row card-wrap-user">
+                <div class="col-2">
+                  <img
+                    class="card-picture card-item"
+                    src="https://thumbs.dreamstime.com/z/default-avatar-profile-icon-vector-social-media-user-image-182145777.jpg?w=768"
+                    alt=""
+                  />
+                </div>
+                <div class="col">
+                  <div class="card-user card-item">{{ item.user_id }}</div>
+                  <div class="card-city card-item">{{ item.city }}</div>
+                </div>
+              </div>
             </div>
           </div>
         </div>
