@@ -1,14 +1,13 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { HomeComponent } from './home/home.component';
-import { DashboardComponent } from './dashboard/dashboard.component';
-import { CommentsComponent } from './comments/comments.component';
-import { ProfileComponent } from './profile/profile.component';
-import { VoorwaardenComponent } from './voorwaarden/voorwaarden.component';
-import { SearchComponent } from './search/search.component';
-import { BorrowLendContainerComponent } from './borrow-lend-container/borrow-lend-container.component';
-import { BorrowComponent } from './borrow-lend-container/borrow/borrow.component';
-import { LendComponent } from './borrow-lend-container/lend/lend.component';
+import { HomeComponent } from './components/HOME/home/home.component';
+import { DashboardComponent } from './components/DASHBOARD/dashboard/dashboard.component';
+import { ProfileComponent } from './components/MODALS/profile/profile.component';
+import { VoorwaardenComponent } from './components/PAGES/voorwaarden/voorwaarden.component';
+import { SearchComponent } from './components/MODALS/search/search.component';
+import { BorrowLendContainerComponent } from './components/HOME/borrow-lend-container/borrow-lend-container.component';
+import { BorrowComponent } from './components/HOME/borrow-lend-container/borrow/borrow.component';
+import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend.component';
 
 const routes: Routes = [
   {
@@ -23,8 +22,6 @@ const routes: Routes = [
     path: 'dashboard/:categoryId/subcategory/:subcategoryId',
     component: DashboardComponent,
   },
-
-  { path: 'comments', component: CommentsComponent },
   { path: 'profile', component: ProfileComponent },
   { path: 'search', component: SearchComponent },
   { path: 'voorwaarden', component: VoorwaardenComponent },
