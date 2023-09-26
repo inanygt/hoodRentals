@@ -13,6 +13,7 @@ export class AllProductsComponent implements OnInit {
   catId: any;
   categoryId: number = 1;
   userId: number = 1;
+  selectedCategoryId: number | null = null; // no category selected
 
   item: any;
 
@@ -39,11 +40,14 @@ export class AllProductsComponent implements OnInit {
   }
 
   catRefresh(catId: number) {
-    this.categoryId = catId;
-    console.log(this.categoryId);
+    // this.categoryId = catId;
+    this.selectedCategoryId = catId;
+    this.loadItemsByCategoryId(catId);
 
     // update cards with new catId
-    this.categoryService.getItemsFromCat(this.categoryId).subscribe((data) => {
+  }
+  loadItemsByCategoryId(categoryId: number) {
+    this.categoryService.getItemsFromCat(categoryId).subscribe((data) => {
       this.items = data;
 
       // Add corresponding user name to userId

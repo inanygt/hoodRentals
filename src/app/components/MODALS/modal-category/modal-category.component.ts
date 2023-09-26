@@ -19,9 +19,6 @@ export class ModalCategoryComponent implements OnInit {
   categories: any;
 
   // Methods
-  search(eventData: Event) {
-    console.log((<HTMLInputElement>eventData.target).value);
-  }
 
   constructor(
     private modalService: NgbModal,

@@ -4,11 +4,17 @@
     <div class="container-dashboard flex">
       <div *ngFor="let category of categories">
         <a routerLink="/home" (click)="catRefresh(category.id)">
-          <div class="item flex-item">
+          <div
+            [ngStyle]="{
+              'background-color':
+                selectedCategoryId === category.id ? '#feefe5' : ''
+            }"
+            class="item flex-item"
+          >
             <div class="dashboard-card">
               <img
                 class="dashboard-img-item d-flex flex-column"
-                src="{{ category.image }}"
+                [src]="category.image"
                 alt=""
               />
               <div class="text-container">
