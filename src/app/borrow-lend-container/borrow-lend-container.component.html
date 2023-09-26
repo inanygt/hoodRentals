@@ -1,9 +1,12 @@
-<div>
-  <h1>Hoe werkt hoodRentals?</h1>
-  <!-- Navigation buttons -->
-  <button [routerLink]="['/home', 'borrow']">Borrow</button>
-  <button [routerLink]="['/home', 'lend']">Lend</button>
-
-  <!-- Nested router outlet for dynamic views -->
-  <router-outlet></router-outlet>
+<div class="container text-center">
+  <div class="inner-container">
+    <h1 class="title">Hoe werkt Hood Rentals?</h1>
+    <!-- Navigation buttons -->
+    <div [routerLink]="['/home', 'borrow']" class="btn btn-secondary">
+      Borrow
+    </div>
+    <div [routerLink]="['/home', 'lend']" class="btn btn-secondary">Lend</div>
+    <!-- Nested router outlet for dynamic views -->
+    <router-outlet></router-outlet>
+  </div>
 </div>

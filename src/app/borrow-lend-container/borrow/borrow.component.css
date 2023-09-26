@@ -1,0 +1,36 @@
+.container {
+  margin-top: 2rem;
+}
+
+.card {
+  border-radius: 30px;
+  margin-bottom: 0.6rem;
+  background-color: aliceblue;
+}
+
+.img {
+  border-radius: 30px;
+}
+
+.text-card-wrap {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.inner-text-card-wrap {
+  width: 80%;
+}
+
+.title-card {
+  font-size: 18px;
+}
+
+.row > * {
+  padding: 0;
+}
+
+.description-card {
+  color: gray;
+}
