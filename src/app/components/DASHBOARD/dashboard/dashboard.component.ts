@@ -38,7 +38,6 @@ export class DashboardComponent implements OnInit {
       // Get items subcategory
       this.itemService.getSubItems(subcategoryId).subscribe((data) => {
         this.items = data;
-        console.log(data);
 
         // Iterate through items and fetch user names
         this.items.forEach((item: any, index: any) => {
@@ -51,7 +50,6 @@ export class DashboardComponent implements OnInit {
       });
 
       this.categoryService.getCategoryData(categoryId).subscribe((data) => {
-        console.log(data);
         this.category = data;
       });
 

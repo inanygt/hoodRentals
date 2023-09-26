@@ -7,7 +7,11 @@
       Doe mee in jouw buurt
     </button>
   </div>
-
+  <!-- Notification -->
+  <div [hidden]="displayNotification" class="alert alert-warning" role="alert">
+    A simple warning alert—check it out!
+    <div (click)="closeNotification()" class="btn btn-close"></div>
+  </div>
   <app-beschikbaar></app-beschikbaar>
   <app-all-products></app-all-products>
   <app-borrow-lend-container></app-borrow-lend-container>
