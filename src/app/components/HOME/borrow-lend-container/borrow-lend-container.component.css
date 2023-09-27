@@ -1,5 +1,5 @@
 .container {
-  margin-top: 4rem;
+  margin-top: 6rem;
 }
 
 .title {
@@ -9,4 +9,8 @@
 .btn {
   margin: 0 0.5rem;
   border-radius: 50px;
+}
+
+.selectedBtn {
+  background-color: #feefe5;
 }

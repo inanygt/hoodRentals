@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+
 import { ModalCategoryComponent } from '../../MODALS/modal-category/modal-category.component';
 import { ProfileComponent } from '../../MODALS/profile/profile.component';
 
@@ -19,7 +20,7 @@ export class FooterComponent implements OnInit {
   // Methods
   home() {
     console.log('home');
-    window.location.href = '/home';
+    window.location.href = '/borrow';
   }
 
   constructor(private modalService: NgbModal) {}

@@ -43,13 +43,11 @@ export class AllProductsComponent implements OnInit {
     // this.categoryId = catId;
     this.selectedCategoryId = catId;
     this.loadItemsByCategoryId(catId);
-
-    // update cards with new catId
   }
+
   loadItemsByCategoryId(categoryId: number) {
     this.categoryService.getItemsFromCat(categoryId).subscribe((data) => {
       this.items = data;
-
       // Add corresponding user name to userId
       this.items.forEach((userId: number, index: any) => {
         this.userService.getUserById(this.userId).subscribe((data) => {

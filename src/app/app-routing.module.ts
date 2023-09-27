@@ -11,7 +11,7 @@ import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend
 
 const routes: Routes = [
   {
-    path: 'home',
+    path: '',
     component: HomeComponent,
     children: [
       { path: 'borrow', component: BorrowComponent },
