@@ -32,8 +32,9 @@ import { DashboardItemsHorizontalComponent } from './components/DASHBOARD/dashbo
 import { BorrowLendContainerComponent } from './components/HOME/borrow-lend-container/borrow-lend-container.component';
 import { BorrowComponent } from './components/HOME/borrow-lend-container/borrow/borrow.component';
 import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend.component';
-import { ParentComponent } from './parent/parent.component';
-import { ChildComponent } from './child/child.component';
+import { ParentComponent } from './Testing/parent/parent.component';
+import { ChildComponent } from './Testing/child/child.component';
+import { HorizontalCardsComponent } from './components/HOME/horizontal-cards/horizontal-cards.component';
 
 @NgModule({
   declarations: [
@@ -55,6 +56,7 @@ import { ChildComponent } from './child/child.component';
     LendComponent,
     ParentComponent,
     ChildComponent,
+    HorizontalCardsComponent,
   ],
   imports: [
     BrowserModule,

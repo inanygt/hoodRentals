@@ -13,7 +13,6 @@ export class AllProductsComponent implements OnInit {
   catId: any;
   categoryId: number = 1;
   userId: number = 1;
-  selectedCategoryId: number | null = null; // no category selected
   item: any;
 
   constructor(
@@ -29,24 +28,6 @@ export class AllProductsComponent implements OnInit {
     this.categoryService.getItemsFromCat(this.categoryId).subscribe((data) => {
       this.items = data;
 
-      // Add corresponding user name to userId
-      this.items.forEach((userId: number, index: any) => {
-        this.userService.getUserById(this.userId).subscribe((data) => {
-          this.items[index].user_id = data.name;
-        });
-      });
-    });
-  }
-
-  catRefresh(catId: number) {
-    // this.categoryId = catId;
-    this.selectedCategoryId = catId;
-    this.loadItemsByCategoryId(catId);
-  }
-
-  loadItemsByCategoryId(categoryId: number) {
-    this.categoryService.getItemsFromCat(categoryId).subscribe((data) => {
-      this.items = data;
       // Add corresponding user name to userId
       this.items.forEach((userId: number, index: any) => {
         this.userService.getUserById(this.userId).subscribe((data) => {

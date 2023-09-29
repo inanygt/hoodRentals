@@ -1,0 +1,50 @@
+.container-dashboard {
+  margin-top: 2rem;
+  width: 100%;
+  white-space: nowrap;
+}
+
+.item {
+  font-size: 13px;
+  padding: 0.9rem;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+  margin: 0 5px;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.flex-item {
+  flex: 0 0 auto;
+}
+
+.flex::-webkit-scrollbar {
+  width: 0.5em;
+}
+
+.flex::-webkit-scrollbar-thumb {
+  background-color: transparent;
+}
+
+.dashboard-card {
+  display: flex;
+  flex-direction: column;
+  /* height: 60px; */
+}
+
+.dashboard-img-item {
+  max-width: 30px;
+  max-height: 30px;
+
+  padding-bottom: 0.2rem;
+  margin: auto;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}

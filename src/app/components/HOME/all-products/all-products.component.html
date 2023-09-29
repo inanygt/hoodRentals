@@ -1,34 +1,8 @@
 <div class="container text-center">
   <div class="inner-container">
     <h1 class="vaak-gedeeld">Vaak gedeelde spullen</h1>
-    <!-- Input decorator firs time -->
 
-    <!-- Input decorator -->
-    <div class="container-dashboard flex">
-      <div *ngFor="let category of categories">
-        <a routerLink="/home" (click)="catRefresh(category.id)">
-          <div
-            [ngStyle]="{
-              'background-color':
-                selectedCategoryId === category.id ? '#feefe5' : ''
-            }"
-            class="item flex-item"
-          >
-            <div class="dashboard-card">
-              <img
-                class="dashboard-img-item d-flex flex-column"
-                [src]="category.image"
-                alt=""
-              />
-              <div class="text-container">
-                {{ category.name }}
-              </div>
-            </div>
-          </div>
-        </a>
-      </div>
-    </div>
-    <!-- CARDS -->
+    <app-horizontal-cards></app-horizontal-cards>
 
     <div class="row gy-2">
       <div *ngFor="let item of items" class="col-6 col-md-4 col-xl-3">
