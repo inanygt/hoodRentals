@@ -14,26 +14,48 @@ export class AllProductsComponent implements OnInit {
   categoryId: number = 1;
   userId: number = 1;
   item: any;
+  selectedCategoryId: number = 1;
+  totalItems: number = 0;
 
   constructor(
     private categoryService: CategoryService,
     private userService: UserService
   ) {}
   ngOnInit(): void {
-    this.categoryService.getCategories().subscribe((data) => {
-      this.categories = data;
-    });
-
     // Get items from categories cards
-    this.categoryService.getItemsFromCat(this.categoryId).subscribe((data) => {
-      this.items = data;
+    this.categoryService
+      .getItemsFromCat(this.selectedCategoryId)
+      .subscribe((data) => {
+        this.items = data;
+        this.totalItems = this.items.length;
 
-      // Add corresponding user name to userId
-      this.items.forEach((userId: number, index: any) => {
-        this.userService.getUserById(this.userId).subscribe((data) => {
-          this.items[index].user_id = data.name;
+        // Add corresponding user name to userId
+        this.items.forEach((userId: number, index: any) => {
+          this.userService.getUserById(this.userId).subscribe((data) => {
+            this.items[index].user_id = data.name;
+          });
         });
       });
-    });
+  }
+
+  selectedCategory(data: number) {
+    this.selectedCategoryId = data;
+    this.loadItemsByCategoryId(this.selectedCategoryId);
+  }
+
+  loadItemsByCategoryId(selectedCategoryId: number) {
+    this.categoryService
+      .getItemsFromCat(selectedCategoryId)
+      .subscribe((data) => {
+        this.items = data;
+        console.log(this.items);
+        this.totalItems = this.items.length;
+        // Add corresponding user name to userId
+        this.items.forEach((userId: number, index: any) => {
+          this.userService.getUserById(this.userId).subscribe((data) => {
+            this.items[index].user_id = data.name;
+          });
+        });
+      });
   }
 }

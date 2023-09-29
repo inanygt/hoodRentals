@@ -1,8 +1,11 @@
 <div class="container text-center">
   <div class="inner-container">
     <h1 class="vaak-gedeeld">Vaak gedeelde spullen</h1>
+    <h4>Total items ({{ totalItems }})</h4>
 
-    <app-horizontal-cards></app-horizontal-cards>
+    <app-horizontal-cards
+      (categorySelected)="selectedCategory($event)"
+    ></app-horizontal-cards>
 
     <div class="row gy-2">
       <div *ngFor="let item of items" class="col-6 col-md-4 col-xl-3">

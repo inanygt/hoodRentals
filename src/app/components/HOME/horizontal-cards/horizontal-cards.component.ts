@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 import { CategoryService } from 'src/app/services/category.service';
 import { UserService } from 'src/app/services/user.service';
 
@@ -12,46 +12,26 @@ export class HorizontalCardsComponent implements OnInit {
   items: any;
   userId: number = 1;
   categoryId: number = 1;
+  selectedCategoryId: number = 1;
 
-  selectedCategoryId: number | null = null; // no category selected
+  @Output() categorySelected: EventEmitter<number> = new EventEmitter<number>();
 
-  constructor(
-    private categoryService: CategoryService,
-    private userService: UserService
-  ) {}
+  // Emit selected CategoryId;
+  changeCategorySelected() {
+    this.categorySelected.emit(this.selectedCategoryId);
+  }
+
+  getCategoryId(catId: number) {
+    this.selectedCategoryId = catId;
+    this.changeCategorySelected();
+  }
+
+  constructor(private categoryService: CategoryService) {}
+
   ngOnInit(): void {
+    // Get all categories
     this.categoryService.getCategories().subscribe((data) => {
       this.categories = data;
-    });
-
-    // Get items from categories cards
-    this.categoryService.getItemsFromCat(this.categoryId).subscribe((data) => {
-      this.items = data;
-
-      // Add corresponding user name to userId
-      this.items.forEach((userId: number, index: any) => {
-        this.userService.getUserById(this.userId).subscribe((data) => {
-          this.items[index].user_id = data.name;
-        });
-      });
-    });
-  }
-
-  catRefresh(catId: number) {
-    // this.categoryId = catId;
-    this.selectedCategoryId = catId;
-    this.loadItemsByCategoryId(catId);
-  }
-
-  loadItemsByCategoryId(categoryId: number) {
-    this.categoryService.getItemsFromCat(categoryId).subscribe((data) => {
-      this.items = data;
-      // Add corresponding user name to userId
-      this.items.forEach((userId: number, index: any) => {
-        this.userService.getUserById(this.userId).subscribe((data) => {
-          this.items[index].user_id = data.name;
-        });
-      });
     });
   }
 }

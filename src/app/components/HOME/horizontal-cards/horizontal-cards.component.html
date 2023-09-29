@@ -1,6 +1,6 @@
 <div class="container-dashboard flex">
   <div *ngFor="let category of categories">
-    <a routerLink="/home" (click)="catRefresh(category.id)">
+    <a routerLink="/" (click)="getCategoryId(category.id)">
       <div
         [ngStyle]="{
           'background-color':
