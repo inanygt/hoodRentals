@@ -30,8 +30,8 @@ export class AllProductsComponent implements OnInit {
         this.totalItems = this.items.length;
 
         // Add corresponding user name to userId
-        this.items.forEach((userId: number, index: any) => {
-          this.userService.getUserById(this.userId).subscribe((data) => {
+        this.items.forEach((item: any, index: any) => {
+          this.userService.getUserById(item.user_id).subscribe((data) => {
             this.items[index].user_id = data.name;
           });
         });
@@ -47,12 +47,11 @@ export class AllProductsComponent implements OnInit {
     this.categoryService
       .getItemsFromCat(selectedCategoryId)
       .subscribe((data) => {
-        this.items = data;
-        console.log(this.items);
         this.totalItems = this.items.length;
+        this.items = data;
         // Add corresponding user name to userId
-        this.items.forEach((userId: number, index: any) => {
-          this.userService.getUserById(this.userId).subscribe((data) => {
+        this.items.forEach((item: any, index: any) => {
+          this.userService.getUserById(item.user_id).subscribe((data) => {
             this.items[index].user_id = data.name;
           });
         });
