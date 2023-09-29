@@ -8,12 +8,7 @@ import { UserService } from '../../../services/user.service';
   styleUrls: ['./all-products.component.css'],
 })
 export class AllProductsComponent implements OnInit {
-  categories: any;
   items: any;
-  catId: any;
-  categoryId: number = 1;
-  userId: number = 1;
-  item: any;
   selectedCategoryId: number = 1;
   totalItems: number = 0;
 
@@ -21,6 +16,7 @@ export class AllProductsComponent implements OnInit {
     private categoryService: CategoryService,
     private userService: UserService
   ) {}
+
   ngOnInit(): void {
     // Get items from categories cards
     this.categoryService
@@ -28,13 +24,7 @@ export class AllProductsComponent implements OnInit {
       .subscribe((data) => {
         this.items = data;
         this.totalItems = this.items.length;
-
-        // Add corresponding user name to userId
-        this.items.forEach((item: any, index: any) => {
-          this.userService.getUserById(item.user_id).subscribe((data) => {
-            this.items[index].user_id = data.name;
-          });
-        });
+        this.replaceIdWithName(this.items);
       });
   }
 
@@ -49,12 +39,15 @@ export class AllProductsComponent implements OnInit {
       .subscribe((data) => {
         this.totalItems = this.items.length;
         this.items = data;
-        // Add corresponding user name to userId
-        this.items.forEach((item: any, index: any) => {
-          this.userService.getUserById(item.user_id).subscribe((data) => {
-            this.items[index].user_id = data.name;
-          });
-        });
+        this.replaceIdWithName(this.items);
       });
+  }
+
+  replaceIdWithName(items: any) {
+    this.items.forEach((item: any, index: any) => {
+      this.userService.getUserById(item.user_id).subscribe((data) => {
+        this.items[index].user_id = data.name;
+      });
+    });
   }
 }
