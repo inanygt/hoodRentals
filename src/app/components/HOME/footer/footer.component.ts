@@ -20,7 +20,7 @@ export class FooterComponent implements OnInit {
   // Methods
   home() {
     console.log('home');
-    window.location.href = '/borrow';
+    window.location.href = '/';
   }
 
   constructor(private modalService: NgbModal) {}

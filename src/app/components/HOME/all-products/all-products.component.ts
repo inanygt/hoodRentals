@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { CategoryService } from '../../../services/category.service';
 import { UserService } from '../../../services/user.service';
 
@@ -14,7 +14,6 @@ export class AllProductsComponent implements OnInit {
   categoryId: number = 1;
   userId: number = 1;
   selectedCategoryId: number | null = null; // no category selected
-
   item: any;
 
   constructor(

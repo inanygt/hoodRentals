@@ -1,0 +1,36 @@
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="radio"
+    name="flexRadioDefault"
+    id="flexRadioDefault1"
+    value="All"
+    [(ngModel)]="selectedRadioBtn"
+    (change)="onChangeRadioBtn()"
+  />
+  <label class="form-check-label" for="flexRadioDefault1"> All </label>
+</div>
+<div class="form-check">
+  <input
+    [(ngModel)]="selectedRadioBtn"
+    class="form-check-input"
+    type="radio"
+    name="flexRadioDefault"
+    id="flexRadioDefault2"
+    value="free"
+    (change)="onChangeRadioBtn()"
+  />
+  <label class="form-check-label" for="flexRadioDefault2"> premium </label>
+</div>
+<div class="form-check">
+  <input
+    class="form-check-input"
+    type="radio"
+    name="flexRadioDefault"
+    id="flexRadioDefault2"
+    value="premium"
+    [(ngModel)]="selectedRadioBtn"
+    (change)="onChangeRadioBtn()"
+  />
+  <label class="form-check-label" for="flexRadioDefault2"> Free </label>
+</div>

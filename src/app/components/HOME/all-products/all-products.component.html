@@ -1,6 +1,9 @@
 <div class="container text-center">
   <div class="inner-container">
     <h1 class="vaak-gedeeld">Vaak gedeelde spullen</h1>
+    <!-- Input decorator firs time -->
+
+    <!-- Input decorator -->
     <div class="container-dashboard flex">
       <div *ngFor="let category of categories">
         <a routerLink="/home" (click)="catRefresh(category.id)">

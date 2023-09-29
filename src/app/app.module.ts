@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { FormsModule } from '@angular/forms';
 
 // Angular Material
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -31,6 +32,8 @@ import { DashboardItemsHorizontalComponent } from './components/DASHBOARD/dashbo
 import { BorrowLendContainerComponent } from './components/HOME/borrow-lend-container/borrow-lend-container.component';
 import { BorrowComponent } from './components/HOME/borrow-lend-container/borrow/borrow.component';
 import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend.component';
+import { ParentComponent } from './parent/parent.component';
+import { ChildComponent } from './child/child.component';
 
 @NgModule({
   declarations: [
@@ -50,6 +53,8 @@ import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend
     BorrowLendContainerComponent,
     BorrowComponent,
     LendComponent,
+    ParentComponent,
+    ChildComponent,
   ],
   imports: [
     BrowserModule,
@@ -64,6 +69,7 @@ import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend
     HttpClientModule,
     CommonModule,
     AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

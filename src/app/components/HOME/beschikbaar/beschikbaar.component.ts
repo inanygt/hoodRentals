@@ -1,10 +1,8 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-beschikbaar',
   templateUrl: './beschikbaar.component.html',
-  styleUrls: ['./beschikbaar.component.css']
+  styleUrls: ['./beschikbaar.component.css'],
 })
-export class BeschikbaarComponent {
-
-}
+export class BeschikbaarComponent {}
