@@ -1,6 +1,12 @@
 import { Component, OnInit } from '@angular/core';
-import { NgbActiveModal } from '@ng-bootstrap/ng-bootstrap';
 import { Router } from '@angular/router';
+import {
+  NgbActiveModal,
+  NgbModal,
+  NgbNavOutlet,
+  NgbModalOptions,
+} from '@ng-bootstrap/ng-bootstrap';
+import { LoginComponent } from 'src/app/login/login.component';
 
 @Component({
   selector: 'app-profile',
@@ -13,12 +19,21 @@ export class ProfileComponent implements OnInit {
     this.activeModal.close();
   }
 
-  constructor(public activeModal: NgbActiveModal, private router: Router) {}
+  constructor(
+    private modalService: NgbModal,
+    public activeModal: NgbActiveModal,
+    private router: Router
+  ) {}
 
   ngOnInit(): void {}
 
-  login() {
-    this.router.navigate(['/login']);
+  goToLogin() {
+    const modalOptions: NgbModalOptions = {
+      animation: false,
+      backdrop: false,
+      // fullscreen: 'xxl',
+    };
+    this.modalService.open(LoginComponent, modalOptions);
     this.activeModal.dismiss();
   }
 }

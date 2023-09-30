@@ -1,6 +1,6 @@
-<div class="login-container">
+<!-- <div class="login-container">
   <h2>Login</h2>
-  <form [formGroup]="reactiveForm" (ngSubmit)="onSubmit()">
+  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
     <div class="form-group">
       <label for="email">Email:</label>
       <input type="email" id="email" formControlName="email" />
@@ -9,7 +9,78 @@
       <label for="password">Password:</label>
       <input type="password" id="password" formControlName="password" />
     </div>
-    <button type="submit" [disabled]="reactiveForm.invalid">Submit</button>
+    <button type="submit" [disabled]="loginForm.invalid">Submit</button>
   </form>
-  <!-- <span>New to our platform? <a routerLink="/profile">Sign Up!</a> </span> -->
-</div>
+</div> -->
+
+<form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+  <div class="modal-header modal-header-profile">
+    <div class="modal-title-profile">
+      <h1>Inloggen</h1>
+    </div>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="activeModal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <!-- Email adres -->
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Email address</label
+      >
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="name@email.com"
+      />
+    </div>
+    <!-- Password -->
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Paswoord</label>
+      <input
+        formControlName="password"
+        type="password"
+        class="form-control"
+        id="exampleFormControlInput1"
+        placeholder="******"
+      />
+    </div>
+    <!-- Profile nieuwtjes -->
+    <!-- <div class="wrap-form-check">
+      <div class="form-check form-check-reverse profile-checkbox">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="reverseCheck1"
+        />
+        <label class="form-check-label" for="reverseCheck1">
+          Hou mij op de hoogte van Peerby nieuwtjes
+          <i class="fa-solid fa-heart"></i>
+        </label>
+      </div>
+    </div> -->
+    <!-- Btn schrijf je in email -->
+    <button
+      type="submit"
+      [disabled]="loginForm.invalid"
+      class="btn btn-primary btn-schrijf"
+    >
+      Login
+    </button>
+    <!-- Footer voorwaarden -->
+  </div>
+  <!-- Modal Footer -->
+  <div class="modal-footer">
+    <div class="modal-footer-profile">
+      Heb je nog geen account?
+
+      <a class="subscribe-link" (click)="goToSubscribe()"> Schrijf je in</a>
+    </div>
+  </div>
+</form>

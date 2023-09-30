@@ -11,18 +11,22 @@ import { Observable, from } from 'rxjs';
 export class AuthenticationService {
   constructor(private auth: AngularFireAuth) {}
 
-  signIn(params: SignIn): Observable<any> {
-    return from(
-      this.auth.signInWithEmailAndPassword(params.email, params.password)
-    );
+  login(username: string, password: string): Observable<any> {
+    return from(this.auth.signInWithEmailAndPassword(username, password));
   }
+
+  // signIn(params: SignIn): Observable<any> {
+  //   return from(
+  //     this.auth.signInWithEmailAndPassword(params.email, params.password)
+  //   );
+  // }
 
   logout() {
     return from(this.auth.signOut());
   }
 }
 
-type SignIn = {
-  email: string;
-  password: string;
-};
+// type SignIn = {
+//   email: string;
+//   password: string;
+// };
