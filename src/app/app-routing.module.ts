@@ -8,6 +8,7 @@ import { SearchComponent } from './components/MODALS/search/search.component';
 import { BorrowLendContainerComponent } from './components/HOME/borrow-lend-container/borrow-lend-container.component';
 import { BorrowComponent } from './components/HOME/borrow-lend-container/borrow/borrow.component';
 import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend.component';
+import { LoginComponent } from './login/login.component';
 
 const routes: Routes = [
   {
@@ -25,6 +26,7 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'search', component: SearchComponent },
   { path: 'voorwaarden', component: VoorwaardenComponent },
+  { path: 'login', component: LoginComponent },
 ];
 
 @NgModule({

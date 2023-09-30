@@ -16,4 +16,9 @@ export class ProfileComponent implements OnInit {
   constructor(public activeModal: NgbActiveModal, private router: Router) {}
 
   ngOnInit(): void {}
+
+  login() {
+    this.router.navigate(['/login']);
+    this.activeModal.dismiss();
+  }
 }

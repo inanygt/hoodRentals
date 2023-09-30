@@ -2,11 +2,12 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
+import { environment } from 'src/environments/environment';
 
 // Angular Material
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -35,6 +36,10 @@ import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend
 import { ParentComponent } from './Testing/parent/parent.component';
 import { ChildComponent } from './Testing/child/child.component';
 import { HorizontalCardsComponent } from './components/HOME/horizontal-cards/horizontal-cards.component';
+import { LoginComponent } from './login/login.component';
+
+import { AngularFireModule } from '@angular/fire/compat';
+import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 
 @NgModule({
   declarations: [
@@ -57,6 +62,7 @@ import { HorizontalCardsComponent } from './components/HOME/horizontal-cards/hor
     ParentComponent,
     ChildComponent,
     HorizontalCardsComponent,
+    LoginComponent,
   ],
   imports: [
     BrowserModule,
@@ -72,6 +78,9 @@ import { HorizontalCardsComponent } from './components/HOME/horizontal-cards/hor
     CommonModule,
     AppRoutingModule,
     FormsModule,
+    ReactiveFormsModule,
+    AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
   providers: [],
   bootstrap: [AppComponent],
