@@ -1,1 +1,2 @@
-<p>lhome works!</p>
+<h1 *ngIf="user$ | async as user">Welcome {{ user.email }}</h1>
+<button class="btn btn-primary" (click)="logout()">Logout</button>

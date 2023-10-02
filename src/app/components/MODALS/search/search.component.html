@@ -1,4 +1,9 @@
 <div class="btn-container">
+  <ng-container *ngIf="authenticationService.currentUser$ | async as User">
+    <i class="fa-regular fa-user"></i>
+    <i class="fa-solid fa-gear"></i>
+    <i class="fa-regular fa-square-plus"></i>
+  </ng-container>
   <button type="button" id="mainBtn" class="btn" (click)="open()">
     <i class="fa-solid fa-magnifying-glass"></i> What are you looking for?
   </button>

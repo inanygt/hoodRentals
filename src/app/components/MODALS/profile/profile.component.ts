@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import {
   NgbActiveModal,
@@ -14,6 +15,11 @@ import { LoginComponent } from 'src/app/login/login.component';
   styleUrls: ['./profile.component.css'],
 })
 export class ProfileComponent implements OnInit {
+  signUpForm = new FormGroup({
+    name: new FormControl('', Validators.required),
+    email: new FormControl('', [Validators.required, Validators.email]),
+  });
+
   navigateToVoorwaarden() {
     this.router.navigate(['/voorwaarden']);
     this.activeModal.close();

@@ -7,6 +7,7 @@ import {
   NgbNavOutlet,
   NgbModalOptions,
 } from '@ng-bootstrap/ng-bootstrap';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-search',
@@ -14,7 +15,10 @@ import {
   styleUrls: ['./search.component.css'],
 })
 export class SearchComponent {
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private modalService: NgbModal,
+    public authenticationService: AuthenticationService
+  ) {}
 
   open() {
     const modalOptions: NgbModalOptions = {

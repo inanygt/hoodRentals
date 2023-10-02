@@ -10,11 +10,20 @@ import { BorrowComponent } from './components/HOME/borrow-lend-container/borrow/
 import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend.component';
 import { LoginComponent } from './login/login.component';
 import { LhomeComponent } from './components/loggedin/lhome/lhome.component';
+import {
+  canActivate,
+  redirectLoggedInTo,
+  redirectUnauthorizedTo,
+} from '@angular/fire/auth-guard';
+
+const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
+const redirectLoggedInToHome = () => redirectLoggedInTo(['']);
 
 const routes: Routes = [
   {
     path: '',
     component: HomeComponent,
+
     children: [
       { path: 'borrow', component: BorrowComponent },
       { path: 'lend', component: LendComponent },
@@ -28,7 +37,11 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'voorwaarden', component: VoorwaardenComponent },
   // After logged in
-  { path: 'lhome', component: LhomeComponent },
+  {
+    path: 'lhome',
+    component: LhomeComponent,
+    ...canActivate(redirectUnauthorizedToLogin),
+  },
 ];
 
 @NgModule({
