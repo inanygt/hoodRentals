@@ -9,6 +9,7 @@ import { BorrowLendContainerComponent } from './components/HOME/borrow-lend-cont
 import { BorrowComponent } from './components/HOME/borrow-lend-container/borrow/borrow.component';
 import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend.component';
 import { LoginComponent } from './login/login.component';
+import { LhomeComponent } from './components/loggedin/lhome/lhome.component';
 
 const routes: Routes = [
   {
@@ -26,6 +27,8 @@ const routes: Routes = [
   { path: 'profile', component: ProfileComponent },
   { path: 'search', component: SearchComponent },
   { path: 'voorwaarden', component: VoorwaardenComponent },
+  // After logged in
+  { path: 'lhome', component: LhomeComponent },
 ];
 
 @NgModule({

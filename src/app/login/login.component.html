@@ -1,18 +1,3 @@
-<!-- <div class="login-container">
-  <h2>Login</h2>
-  <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
-    <div class="form-group">
-      <label for="email">Email:</label>
-      <input type="email" id="email" formControlName="email" />
-    </div>
-    <div class="form-group">
-      <label for="password">Password:</label>
-      <input type="password" id="password" formControlName="password" />
-    </div>
-    <button type="submit" [disabled]="loginForm.invalid">Submit</button>
-  </form>
-</div> -->
-
 <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
   <div class="modal-header modal-header-profile">
     <div class="modal-title-profile">
@@ -47,25 +32,9 @@
         type="password"
         class="form-control"
         id="exampleFormControlInput1"
-        placeholder="******"
+        placeholder="paswoord"
       />
     </div>
-    <!-- Profile nieuwtjes -->
-    <!-- <div class="wrap-form-check">
-      <div class="form-check form-check-reverse profile-checkbox">
-        <input
-          class="form-check-input"
-          type="checkbox"
-          value=""
-          id="reverseCheck1"
-        />
-        <label class="form-check-label" for="reverseCheck1">
-          Hou mij op de hoogte van Peerby nieuwtjes
-          <i class="fa-solid fa-heart"></i>
-        </label>
-      </div>
-    </div> -->
-    <!-- Btn schrijf je in email -->
     <button
       type="submit"
       [disabled]="loginForm.invalid"

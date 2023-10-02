@@ -41,6 +41,7 @@ import { LoginComponent } from './login/login.component';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HotToastModule } from '@ngneat/hot-toast';
+import { LhomeComponent } from './components/loggedin/lhome/lhome.component';
 
 @NgModule({
   declarations: [
@@ -64,6 +65,7 @@ import { HotToastModule } from '@ngneat/hot-toast';
     ChildComponent,
     HorizontalCardsComponent,
     LoginComponent,
+    LhomeComponent,
   ],
   imports: [
     BrowserModule,

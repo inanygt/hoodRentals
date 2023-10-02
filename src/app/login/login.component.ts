@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormControl, FormGroup } from '@angular/forms';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { AuthenticationService } from '../services/authentication.service';
 import { Router } from '@angular/router';
 import { HotToastService } from '@ngneat/hot-toast';
@@ -17,21 +17,19 @@ import { ProfileComponent } from '../components/MODALS/profile/profile.component
   styleUrls: ['./login.component.css'],
 })
 export class LoginComponent implements OnInit {
-  loginForm: FormGroup;
+  loginForm = new FormGroup({
+    email: new FormControl('', [Validators.required, Validators.email]),
+    password: new FormControl('', [Validators.required]),
+  });
 
   constructor(
+    private authenticationService: AuthenticationService,
     private modalService: NgbModal,
     public activeModal: NgbActiveModal,
-    private authenticationService: AuthenticationService,
     private router: Router,
     private toast: HotToastService
   ) {}
-  ngOnInit(): void {
-    this.loginForm = new FormGroup({
-      email: new FormControl(null),
-      password: new FormControl(null),
-    });
-  }
+  ngOnInit(): void {}
 
   get email() {
     return this.loginForm.get('email');
@@ -57,7 +55,8 @@ export class LoginComponent implements OnInit {
         })
       )
       .subscribe(() => {
-        this.router.navigate(['/']);
+        this.router.navigate(['/lhome']);
+        this.activeModal.dismiss();
       });
   }
 
