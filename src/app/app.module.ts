@@ -7,7 +7,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
-import { environment } from 'src/environments/environment';
+import { environment } from 'src/enviroments/environments';
 
 // Angular Material
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
@@ -35,13 +35,14 @@ import { BorrowComponent } from './components/HOME/borrow-lend-container/borrow/
 import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend.component';
 import { ParentComponent } from './Testing/parent/parent.component';
 import { ChildComponent } from './Testing/child/child.component';
-import { HorizontalCardsComponent } from './components/HOME/horizontal-cards/horizontal-cards.component';
+import { HorizontalCardsComponent } from './horizontal-cards/horizontal-cards.component';
 import { LoginComponent } from './login/login.component';
-
-import { AngularFireModule } from '@angular/fire/compat';
-import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { HotToastModule } from '@ngneat/hot-toast';
+
 import { LhomeComponent } from './components/loggedin/lhome/lhome.component';
+
+import { provideAuth, getAuth } from '@angular/fire/auth';
+import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 
 @NgModule({
   declarations: [
@@ -82,9 +83,9 @@ import { LhomeComponent } from './components/loggedin/lhome/lhome.component';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
-    AngularFireModule.initializeApp(environment.firebase),
-    AngularFireAuthModule,
     HotToastModule.forRoot(),
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+    provideAuth(() => getAuth()),
   ],
   providers: [],
   bootstrap: [AppComponent],

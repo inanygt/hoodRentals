@@ -1,32 +1,33 @@
 import { Injectable } from '@angular/core';
-import { Auth } from '@angular/fire/auth';
-import { AngularFireAuth } from '@angular/fire/compat/auth';
-import { signInWithEmailAndPassword } from 'firebase/auth';
+import { concatMap, from, Observable, of, switchMap } from 'rxjs';
 
-import { Observable, from } from 'rxjs';
+// Angular fire
+import {
+  Auth,
+  signInWithEmailAndPassword,
+  authState,
+  createUserWithEmailAndPassword,
+  updateProfile,
+  UserInfo,
+  UserCredential,
+} from '@angular/fire/auth';
 
 @Injectable({
   providedIn: 'root',
 })
 export class AuthenticationService {
-  constructor(private auth: AngularFireAuth) {}
+  constructor(private auth: Auth) {}
+  currentUser$ = authState(this.auth);
 
-  login(username: string, password: string): Observable<any> {
-    return from(this.auth.signInWithEmailAndPassword(username, password));
+  signUp(email: string, password: string): Observable<UserCredential> {
+    return from(createUserWithEmailAndPassword(this.auth, email, password));
   }
 
-  // signIn(params: SignIn): Observable<any> {
-  //   return from(
-  //     this.auth.signInWithEmailAndPassword(params.email, params.password)
-  //   );
-  // }
+  login(email: string, password: string): Observable<any> {
+    return from(signInWithEmailAndPassword(this.auth, email, password));
+  }
 
   logout() {
     return from(this.auth.signOut());
   }
 }
-
-// type SignIn = {
-//   email: string;
-//   password: string;
-// };

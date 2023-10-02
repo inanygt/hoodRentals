@@ -44,6 +44,7 @@ export class LoginComponent implements OnInit {
       return;
     }
 
+    // Check what happens here
     const { email, password } = this.loginForm.value;
     this.authenticationService
       .login(email, password)
