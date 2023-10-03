@@ -1,5 +1,5 @@
 .container {
-  margin-top: 0.5rem;
+  margin-top: 1rem;
 }
 
 .inner-container {
@@ -18,6 +18,10 @@
   align-self: center;
 }
 
+.profile-icons-right {
+  font-size: 20px;
+}
+
 .firstColLeft {
   background-color: lightgray;
   padding: 5px 10px;
@@ -28,10 +32,24 @@
   display: flex;
 }
 
-.fa-circle-chevron-down {
-  margin-left: 2rem;
+.fa-grip-lines {
+  margin-left: 1rem;
 }
 
 .fa-gift {
   margin-left: 0.5rem;
+}
+
+.email-verified {
+  background: lightgreen;
+  width: auto;
+}
+
+.col-profile {
+  float: right;
+}
+
+.upload-profile {
+  font-size: 90px;
+  color: lightgray;
 }

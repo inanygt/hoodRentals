@@ -1,0 +1,29 @@
+<div class="modal-header modal-header-profile">
+  <div class="modal-title-profile">
+    <h1>Instellingen</h1>
+  </div>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  ></button>
+</div>
+
+<div class="modal-body">
+  <form>
+    <!-- Categories in modal  -->
+    <div class="row">
+      <div class="col-lg-4 mb-3">
+        <div class="modal-category" (click)="open()"></div>
+        <div class="card-instelling">
+          <div class="wrap-instelling-categories">
+            <i class="fa-solid fa-user-secret"></i>
+            <span class="settings-category-title">Lidmaatschap</span>
+          </div>
+          <span class="material-symbols-outlined"> arrow_forward_ios </span>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

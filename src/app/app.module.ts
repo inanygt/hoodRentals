@@ -45,6 +45,7 @@ import { provideAuth, getAuth } from '@angular/fire/auth';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { SignupComponent } from './components/signup/signup.component';
 import { NavComponent } from './components/nav/nav.component';
+import { InstellingComponent } from './components/instelling/instelling.component';
 
 @NgModule({
   declarations: [
@@ -71,6 +72,7 @@ import { NavComponent } from './components/nav/nav.component';
     LhomeComponent,
     SignupComponent,
     NavComponent,
+    InstellingComponent,
   ],
   imports: [
     BrowserModule,

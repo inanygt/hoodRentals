@@ -1,0 +1,14 @@
+.instellingen-category {
+  display: flex;
+}
+
+.settings-category-title {
+  font-size: 16px;
+}
+
+.card-instelling {
+  display: flex;
+  justify-content: space-between;
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+}
