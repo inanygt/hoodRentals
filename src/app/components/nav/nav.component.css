@@ -1,20 +1,25 @@
 .btn-container {
   background-color: #feefe5;
   padding: 0.7rem 0;
-  justify-content: space-between;
+  justify-content: center;
   display: flex;
-  align-items: center; /* Vertically center items */
+  align-items: center;
 }
 
 .button-group {
   display: flex;
-  justify-content: flex-end; /* Align items to the right */
+  justify-content: flex-end;
   align-items: center; /* Vertically center items */
   margin-left: auto; /* Push the button group to the right */
   padding-right: 1rem;
 }
 
 .logged-in-btns {
-  font-size: 20px;
+  font-size: 18px;
   padding-left: 0.8rem;
+  cursor: pointer;
+}
+
+.logged-in-btns:hover {
+  color: gray;
 }

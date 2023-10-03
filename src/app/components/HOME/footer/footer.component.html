@@ -11,6 +11,14 @@
         ></i>
       </a>
     </div>
+    <ng-container *ngIf="authenticationService.currentUser$ | async as User">
+      <div class="col">
+        <i class="fa-regular fa-square-plus footer-icons"></i>
+      </div>
+      <div class="col">
+        <i class="fa-regular fa-message footer-icons"></i>
+      </div>
+    </ng-container>
     <div class="col">
       <i class="fa-regular fa-user footer-icons" (click)="subscribe()"></i>
     </div>

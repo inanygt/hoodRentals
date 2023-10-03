@@ -11,6 +11,7 @@ import {
   NgbModalOptions,
 } from '@ng-bootstrap/ng-bootstrap';
 import { SignupComponent } from '../../signup/signup.component';
+import { AuthenticationService } from 'src/app/services/authentication.service';
 
 @Component({
   selector: 'app-footer',
@@ -24,7 +25,10 @@ export class FooterComponent implements OnInit {
     window.location.href = '/';
   }
 
-  constructor(private modalService: NgbModal) {}
+  constructor(
+    private modalService: NgbModal,
+    public authenticationService: AuthenticationService
+  ) {}
 
   // open categories modal
   open() {

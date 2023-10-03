@@ -1,2 +1,10 @@
-<h1 *ngIf="user$ | async as user">Welcome {{ user.email }}</h1>
-<button class="btn btn-primary" (click)="logout()">Logout</button>
+<div class="container">
+  <div class="inner-container">
+    <div class="row">
+      <div class="col">
+        <h1 *ngIf="user$ | async as user">Welcome {{ user.email }}</h1>
+        <button class="btn btn-primary" (click)="logout()">Logout</button>
+      </div>
+    </div>
+  </div>
+</div>
