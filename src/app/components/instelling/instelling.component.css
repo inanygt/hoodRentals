@@ -6,9 +6,21 @@
   font-size: 16px;
 }
 
-.card-instelling {
+.card-wrap {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   border: 1px solid lightgray;
-  padding: 0.5rem;
+  padding: 0.8rem 0.8rem;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.modal-body {
+  margin: 0 auto;
+  width: 95%;
+}
+
+.settings-icons {
+  margin-right: 0.6rem;
 }

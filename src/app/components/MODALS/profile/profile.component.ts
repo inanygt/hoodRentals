@@ -39,6 +39,7 @@ export class ProfileComponent implements OnInit {
     const modalOptions: NgbModalOptions = {
       animation: true,
       centered: true,
+      size: 'lg',
     };
 
     this.modalService.open(InstellingComponent, modalOptions);

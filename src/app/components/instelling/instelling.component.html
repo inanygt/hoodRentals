@@ -11,19 +11,56 @@
 </div>
 
 <div class="modal-body">
-  <form>
-    <!-- Categories in modal  -->
-    <div class="row">
-      <div class="col-lg-4 mb-3">
-        <div class="modal-category" (click)="open()"></div>
-        <div class="card-instelling">
-          <div class="wrap-instelling-categories">
-            <i class="fa-solid fa-user-secret"></i>
-            <span class="settings-category-title">Lidmaatschap</span>
-          </div>
-          <span class="material-symbols-outlined"> arrow_forward_ios </span>
-        </div>
-      </div>
+  <div (click)="open()" class="card-wrap">
+    <div class="wrap-instelling-categories">
+      <i class="fa-solid fa-user-secret settings-icons"></i>
+      <span class="settings-category-title">Lidmaatschap</span>
     </div>
-  </form>
+    <span class="material-symbols-outlined"> arrow_forward_ios </span>
+  </div>
+  <div (click)="open()" class="card-wrap">
+    <div class="wrap-instelling-categories">
+      <i class="fa-solid fa-lock settings-icons"></i>
+      <span class="settings-category-title">Wachtwoord</span>
+    </div>
+    <span class="material-symbols-outlined"> arrow_forward_ios </span>
+  </div>
+  <div (click)="open()" class="card-wrap">
+    <div class="wrap-instelling-categories">
+      <i class="fa-solid fa-wallet settings-icons"></i>
+      <span class="settings-category-title">Mijn portemonee</span>
+    </div>
+    <span class="material-symbols-outlined"> arrow_forward_ios </span>
+  </div>
+  <div (click)="open()" class="card-wrap">
+    <div class="wrap-instelling-categories">
+      <i class="fa-regular fa-bell settings-icons"></i>
+      <span class="settings-category-title">Berichten & Notificaties</span>
+    </div>
+    <span class="material-symbols-outlined"> arrow_forward_ios </span>
+  </div>
+  <div (click)="open()" class="card-wrap">
+    <div class="wrap-instelling-categories">
+      <i class="fa-regular fa-user settings-icons"></i>
+      <span class="settings-category-title">Account instellingen</span>
+    </div>
+    <span class="material-symbols-outlined"> arrow_forward_ios </span>
+  </div>
+  <div (click)="open()" class="card-wrap">
+    <div class="wrap-instelling-categories">
+      <i class="fa-regular fa-circle-question settings-icons"></i>
+      <span class="settings-category-title">Help</span>
+    </div>
+    <span class="material-symbols-outlined"> arrow_forward_ios </span>
+  </div>
+  <div (click)="open()" class="card-wrap">
+    <div class="wrap-instelling-categories">
+      <i class="fa-solid fa-earth-americas settings-icons"></i>
+      <span class="settings-category-title">Taal</span>
+    </div>
+    <span class="material-symbols-outlined"> arrow_forward_ios </span>
+  </div>
+</div>
+<div class="modal-footer">
+  <button class="btn" (click)="logout()">Logout</button>
 </div>
