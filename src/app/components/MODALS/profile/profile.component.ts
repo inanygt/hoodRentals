@@ -84,7 +84,7 @@ export class ProfileComponent implements OnInit {
         })
       )
       .subscribe(() => {
-        this.router.navigate(['/home']);
+        this.router.navigate(['/lhome']);
       });
   }
 }
