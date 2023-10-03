@@ -20,6 +20,7 @@
 
 .profile-icons-right {
   font-size: 20px;
+  cursor: pointer;
 }
 
 .firstColLeft {
@@ -40,11 +41,6 @@
   margin-left: 0.5rem;
 }
 
-.email-verified {
-  background: lightgreen;
-  width: auto;
-}
-
 .col-profile {
   float: right;
 }
@@ -52,4 +48,27 @@
 .upload-profile {
   font-size: 90px;
   color: lightgray;
+}
+
+.email-verified {
+  background: lightgreen;
+  padding: 2px 6px;
+  border-radius: 10px;
+  width: 75px;
+}
+
+/* Cards-B */
+
+.cards-b-row {
+  margin-top: 1rem;
+}
+
+.card-b {
+  background-color: lightgray;
+  text-align: center;
+  height: 70px;
+  border-radius: 15px;
+  align-items: center;
+  display: flex;
+  justify-content: center;
 }
