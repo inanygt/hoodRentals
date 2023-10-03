@@ -17,7 +17,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 
 // Components
-import { NavBarComponent } from './components/HOME/nav-bar/nav-bar.component';
+
 import { AppComponent } from './app.component';
 import { FooterComponent } from './components/HOME/footer/footer.component';
 import { HomeComponent } from './components/HOME/home/home.component';
@@ -44,11 +44,12 @@ import { LhomeComponent } from './components/loggedin/lhome/lhome.component';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { SignupComponent } from './components/signup/signup.component';
+import { NavComponent } from './components/nav/nav.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    NavBarComponent,
+
     FooterComponent,
     HomeComponent,
     AllProductsComponent,
@@ -69,6 +70,7 @@ import { SignupComponent } from './components/signup/signup.component';
     LoginComponent,
     LhomeComponent,
     SignupComponent,
+    NavComponent,
   ],
   imports: [
     BrowserModule,

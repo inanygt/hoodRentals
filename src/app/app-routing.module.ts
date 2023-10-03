@@ -37,7 +37,7 @@ const routes: Routes = [
   { path: 'signup', component: SignupComponent },
   { path: 'search', component: SearchComponent },
   { path: 'voorwaarden', component: VoorwaardenComponent },
-  // After logged in
+  { path: 'profile', component: ProfileComponent },
   {
     path: 'lhome',
     component: LhomeComponent,

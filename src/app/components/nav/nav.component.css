@@ -1,0 +1,20 @@
+.btn-container {
+  background-color: #feefe5;
+  padding: 0.7rem 0;
+  justify-content: space-between;
+  display: flex;
+  align-items: center; /* Vertically center items */
+}
+
+.button-group {
+  display: flex;
+  justify-content: flex-end; /* Align items to the right */
+  align-items: center; /* Vertically center items */
+  margin-left: auto; /* Push the button group to the right */
+  padding-right: 1rem;
+}
+
+.logged-in-btns {
+  font-size: 20px;
+  padding-left: 0.8rem;
+}

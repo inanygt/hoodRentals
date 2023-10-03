@@ -1,9 +1,3 @@
-.btn-container {
-  background-color: #feefe5;
-  padding: 0.7rem 0;
-  justify-content: space-between;
-}
-
 #mainBtn {
   display: block;
   /* margin: 0rem auto; */
@@ -12,32 +6,4 @@
   background-color: white;
   border-radius: 50px;
   padding: 0.5rem 3rem;
-}
-
-.btn-card {
-  text-decoration: none;
-}
-
-.modal-header {
-  background-color: red;
-}
-
-.btn-container {
-  display: flex;
-  align-items: center; /* Vertically center items */
-}
-
-.button-group {
-  display: flex;
-  justify-content: flex-end; /* Align items to the right */
-  align-items: center; /* Vertically center items */
-  margin-left: auto; /* Push the button group to the right */
-  padding-right: 1rem;
-}
-
-/* Add any additional styling as needed */
-
-.logged-in-btns {
-  font-size: 20px;
-  padding-left: 0.8rem;
 }
