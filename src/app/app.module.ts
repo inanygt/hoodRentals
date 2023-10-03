@@ -43,6 +43,7 @@ import { LhomeComponent } from './components/loggedin/lhome/lhome.component';
 
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
+import { SignupComponent } from './components/signup/signup.component';
 
 @NgModule({
   declarations: [
@@ -67,6 +68,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
     HorizontalCardsComponent,
     LoginComponent,
     LhomeComponent,
+    SignupComponent,
   ],
   imports: [
     BrowserModule,

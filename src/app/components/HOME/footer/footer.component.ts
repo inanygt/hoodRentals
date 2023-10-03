@@ -10,6 +10,7 @@ import {
   NgbNavOutlet,
   NgbModalOptions,
 } from '@ng-bootstrap/ng-bootstrap';
+import { SignupComponent } from '../../signup/signup.component';
 
 @Component({
   selector: 'app-footer',
@@ -40,7 +41,7 @@ export class FooterComponent implements OnInit {
     const modalOptions: NgbModalOptions = {
       size: 'lg',
     };
-    this.modalService.open(ProfileComponent, modalOptions);
+    this.modalService.open(SignupComponent, modalOptions);
   }
 
   ngOnInit(): void {}

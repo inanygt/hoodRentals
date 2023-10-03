@@ -10,6 +10,7 @@ import {
   NgbModalOptions,
 } from '@ng-bootstrap/ng-bootstrap';
 import { ProfileComponent } from '../components/MODALS/profile/profile.component';
+import { SignupComponent } from '../components/signup/signup.component';
 
 @Component({
   selector: 'app-login',
@@ -67,7 +68,7 @@ export class LoginComponent implements OnInit {
       backdrop: false,
       // fullscreen: 'xxl',
     };
-    this.modalService.open(ProfileComponent, modalOptions);
+    this.modalService.open(SignupComponent, modalOptions);
     this.activeModal.dismiss();
   }
 }

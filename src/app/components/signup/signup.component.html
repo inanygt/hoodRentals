@@ -1,0 +1,92 @@
+<form [formGroup]="signUpForm" (ngSubmit)="submit()">
+  <div class="modal-header modal-header-profile">
+    <div class="modal-title-profile">
+      <h1>Schrijf je in</h1>
+    </div>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="activeModal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <!-- Name  -->
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Name</label>
+      <input
+        formControlName="name"
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+      />
+    </div>
+    <!-- Email adres -->
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Email address</label
+      >
+      <input
+        formControlName="email"
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+      />
+    </div>
+    <!-- password  -->
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label">Password</label>
+      <input
+        formControlName="password"
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+      />
+    </div>
+    <!-- confirm password  -->
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Confirm Password</label
+      >
+      <input
+        formControlName="confirmPassword"
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+      />
+    </div>
+    <!-- Profile nieuwtjes -->
+    <div class="wrap-form-check">
+      <div class="form-check form-check-reverse profile-checkbox">
+        <input
+          class="form-check-input"
+          type="checkbox"
+          value=""
+          id="reverseCheck1"
+        />
+        <label class="form-check-label" for="reverseCheck1">
+          Hou mij op de hoogte van Peerby nieuwtjes
+          <i class="fa-solid fa-heart"></i>
+        </label>
+      </div>
+    </div>
+    <!-- Btn schrijf je in email -->
+    <button type="submit" class="btn btn-primary btn-schrijf">
+      Schrijf je in met email
+    </button>
+    <!-- Footer voorwaarden -->
+    <div class="footer-voorwaarden">
+      Door je in te schrijven ga je akkoord met de <br />
+      <a class="navigate-voorwaarden" (click)="navigateToVoorwaarden()">
+        Algemene voorwaarden</a
+      >
+    </div>
+  </div>
+  <!-- Modal Footer -->
+  <div class="modal-footer">
+    <div class="modal-footer-profile">
+      Heb je al een account?
+      <a class="login-link" (click)="goToLogin()"> Inloggen</a>
+    </div>
+  </div>
+</form>
