@@ -13,7 +13,10 @@
     </div>
     <ng-container *ngIf="authenticationService.currentUser$ | async as User">
       <div class="col">
-        <i class="fa-regular fa-square-plus footer-icons"></i>
+        <i
+          (click)="addItem()"
+          class="fa-regular fa-square-plus footer-icons"
+        ></i>
       </div>
       <div class="col">
         <i class="fa-regular fa-message footer-icons"></i>

@@ -1,0 +1,80 @@
+<form [formGroup]="addItemForm" (ngSubmit)="addItem(itemData)">
+  <div class="modal-header modal-header-profile">
+    <div class="modal-title-profile">
+      <h1>Nieuw product</h1>
+    </div>
+    <button
+      type="button"
+      class="btn-close"
+      aria-label="Close"
+      (click)="activeModal.dismiss('Cross click')"
+    ></button>
+  </div>
+  <div class="modal-body">
+    <!-- Add image -->
+    <div class="add-image">
+      <i class="fa-solid fa-camera"></i>
+    </div>
+    <!-- Name  -->
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Producttitel</label
+      >
+      <input
+        formControlName="title"
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+      />
+    </div>
+    <div class="mb-3">
+      <label for="exampleFormControlInput1" class="form-label"
+        >Beschrijving</label
+      >
+      <textarea
+        placeholder="Hoe gedetailleerder je productomschrijving, hoe sneller en beter je je buren kunt helpen."
+        formControlName="description"
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+      ></textarea>
+    </div>
+    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
+      <mat-button-toggle value="bold">Bold</mat-button-toggle>
+      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+    </mat-button-toggle-group>
+    <div *ngIf="selected === 'huur'">
+      <!-- Your content for the "te huur" button goes here -->
+      <p>This content is displayed when the "te huur" button is active.</p>
+    </div>
+    <div class="btn-wrapper mb-3">
+      <!-- <button class="btn btn-lend" #btnLend (click)="checkButtonState()">
+        Te leen
+      </button>
+      <button class="btn btn-borrow">Te huur</button> -->
+    </div>
+    <!-- Switch -->
+    <div class="switch-wrapper mb-3">
+      <div class="form-check form-switch">
+        <label class="form-check-label" for="flexSwitchCheckChecked"
+          >Zichtbaar voor anderen</label
+        >
+        <input
+          class="form-check-input"
+          type="checkbox"
+          role="switch"
+          id="flexSwitchCheckChecked"
+          checked
+        />
+      </div>
+    </div>
+    <div class="wrapper-category btn mb-3">
+      <div class="category-text-left">Categorie</div>
+      <div class="category-text-right">Analoge fotocamera</div>
+      <span class="material-symbols-outlined"> arrow_forward_ios </span>
+    </div>
+
+    <button class="btn btn-submit" type="submit">Opslaan</button>
+  </div>
+  <!-- End -->
+</form>

@@ -12,6 +12,7 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { SignupComponent } from '../../signup/signup.component';
 import { AuthenticationService } from 'src/app/services/authentication.service';
+import { AddItemComponent } from '../../add-item/add-item.component';
 
 @Component({
   selector: 'app-footer',
@@ -49,4 +50,12 @@ export class FooterComponent implements OnInit {
   }
 
   ngOnInit(): void {}
+
+  addItem() {
+    const modalOptions: NgbModalOptions = {
+      centered: true,
+      size: 'lg',
+    };
+    this.modalService.open(AddItemComponent, modalOptions);
+  }
 }

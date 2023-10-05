@@ -13,6 +13,11 @@ export class ItemService {
   // Inject HttpClient in the constructor
   constructor(private http: HttpClient) {}
 
+  // CRUD operations
+  addItem(itemData: any) {
+    return this.http.post(this.url, itemData);
+  }
+
   // Get items
   getItems(): Observable<any> {
     return this.http.get(this.url + '/items');

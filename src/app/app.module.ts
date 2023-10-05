@@ -15,6 +15,7 @@ import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatButtonToggleModule } from '@angular/material/button-toggle';
 
 // Components
 
@@ -46,6 +47,7 @@ import { initializeApp, provideFirebaseApp } from '@angular/fire/app';
 import { SignupComponent } from './components/signup/signup.component';
 import { NavComponent } from './components/nav/nav.component';
 import { InstellingComponent } from './components/instelling/instelling.component';
+import { AddItemComponent } from './components/add-item/add-item.component';
 
 @NgModule({
   declarations: [
@@ -73,6 +75,7 @@ import { InstellingComponent } from './components/instelling/instelling.componen
     SignupComponent,
     NavComponent,
     InstellingComponent,
+    AddItemComponent,
   ],
   imports: [
     BrowserModule,
@@ -82,6 +85,7 @@ import { InstellingComponent } from './components/instelling/instelling.componen
     MatFormFieldModule,
     MatSelectModule,
     MatInputModule,
+    MatButtonToggleModule,
     MatListModule,
     NgbModule,
     HttpClientModule,

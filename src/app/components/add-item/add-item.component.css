@@ -1,0 +1,49 @@
+.container {
+}
+
+.card {
+  height: 100px;
+}
+
+.add-image {
+  display: flex;
+  justify-content: center;
+  margin: 1rem 0rem;
+}
+
+.fa-camera {
+  color: blueviolet;
+  font-size: 30px;
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: blueviolet;
+  color: white;
+}
+
+.btn-wrapper {
+  display: flex;
+}
+
+.btn-borrow,
+.btn-lend {
+  width: 50%;
+  background-color: lightgray;
+}
+
+.switch-wrapper {
+  background-color: lightgray;
+}
+
+.form-check-input {
+  float: right;
+}
+
+.wrapper-category {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid lightgray;
+  border-bottom: 1px solid lightgray;
+}
