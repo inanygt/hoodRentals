@@ -39,20 +39,48 @@
         id="exampleFormControlInput1"
       ></textarea>
     </div>
-    <mat-button-toggle-group name="fontStyle" aria-label="Font Style">
-      <mat-button-toggle value="bold">Bold</mat-button-toggle>
-      <mat-button-toggle value="italic">Italic</mat-button-toggle>
+
+    <mat-button-toggle-group
+      class="toggle-btn-wrapper mb-3"
+      name="fontStyle"
+      (change)="onFontStyleChange($event)"
+      aria-label="Font Style"
+    >
+      <mat-button-toggle class="toggle-btn" value="leen"
+        >Te leen</mat-button-toggle
+      >
+      <mat-button-toggle class="toggle-btn" value="huur"
+        >Te huur</mat-button-toggle
+      >
     </mat-button-toggle-group>
-    <div *ngIf="selected === 'huur'">
-      <!-- Your content for the "te huur" button goes here -->
-      <p>This content is displayed when the "te huur" button is active.</p>
+    <div *ngIf="selectedToggleBtn === 'huur'">
+      <div class="mb-3 prices">
+        <div class="price-left">
+          <label for="exampleFormControlInput1" class="form-label">Prijs</label>
+          <input
+            formControlName="prijs-eerste-dag"
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+          <label for="exampleFormControlInput1" class="form-label"
+            >Eerste dag</label
+          >
+        </div>
+        <div class="price-right">
+          <input
+            formControlName="prijs-eerste-dag"
+            type="email"
+            class="form-control"
+            id="exampleFormControlInput1"
+          />
+          <label for="exampleFormControlInput1" class="form-label"
+            >Extra dag</label
+          >
+        </div>
+      </div>
     </div>
-    <div class="btn-wrapper mb-3">
-      <!-- <button class="btn btn-lend" #btnLend (click)="checkButtonState()">
-        Te leen
-      </button>
-      <button class="btn btn-borrow">Te huur</button> -->
-    </div>
+
     <!-- Switch -->
     <div class="switch-wrapper mb-3">
       <div class="form-check form-switch">

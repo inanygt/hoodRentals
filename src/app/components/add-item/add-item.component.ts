@@ -29,16 +29,10 @@ export class AddItemComponent {
     description: new FormControl(''),
   });
 
-  // Reference to the button element using the template reference variable
-  @ViewChild('btnLend') myButton: ElementRef;
+  selectedToggleBtn: string = '';
 
-  checkButtonState() {
-    const buttonElement: HTMLButtonElement = this.myButton.nativeElement;
-    if (buttonElement.disabled) {
-      console.log('Button is disabled.');
-    } else {
-      console.log('Button is active/enabled.');
-    }
+  onFontStyleChange(event: any) {
+    this.selectedToggleBtn = event.value;
   }
 
   itemData;
