@@ -14,9 +14,9 @@ export class ItemService {
   constructor(private http: HttpClient) {}
 
   // CRUD operations
-  addItem(itemData: any) {
-    return this.http.post(this.url, itemData);
-  }
+  // addItem(itemData: any) {
+  //   return this.http.post(this.url, itemData);
+  // }
 
   // Get items
   getItems(): Observable<any> {
