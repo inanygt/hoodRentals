@@ -1,4 +1,4 @@
-<form [formGroup]="addItemForm" (ngSubmit)="onSubmit()">
+<form [formGroup]="addItemForm" (ngSubmit)="onSubmit(addItemForm.value)">
   <div class="modal-header modal-header-profile">
     <div class="modal-title-profile">
       <h1>Nieuw product</h1>
@@ -31,13 +31,20 @@
       <label for="exampleFormControlInput1" class="form-label"
         >Beschrijving</label
       >
-      <textarea
+      <input
         placeholder="Hoe gedetailleerder je productomschrijving, hoe sneller en beter je je buren kunt helpen."
         formControlName="description"
         type="email"
         class="form-control"
         id="exampleFormControlInput1"
-      ></textarea>
+      />
+      <!-- <textarea
+        placeholder="Hoe gedetailleerder je productomschrijving, hoe sneller en beter je je buren kunt helpen."
+        formControlName="description"
+        type="email"
+        class="form-control"
+        id="exampleFormControlInput1"
+      ></textarea> -->
     </div>
 
     <mat-button-toggle-group
@@ -58,7 +65,7 @@
         <div class="price-left">
           <label for="exampleFormControlInput1" class="form-label">Prijs</label>
           <input
-            formControlName="prijs-eerste-dag"
+            formControlName="price_per_day"
             type="email"
             class="form-control"
             id="exampleFormControlInput1"
@@ -69,7 +76,7 @@
         </div>
         <div class="price-right">
           <input
-            formControlName="prijs-eerste-dag"
+            formControlName="price_per_extra_day"
             type="email"
             class="form-control"
             id="exampleFormControlInput1"
@@ -84,16 +91,17 @@
     <!-- Switch -->
     <div class="switch-wrapper mb-3">
       <div class="form-check form-switch">
-        <label class="form-check-label" for="flexSwitchCheckChecked"
-          >Zichtbaar voor anderen</label
-        >
         <input
           class="form-check-input"
           type="checkbox"
           role="switch"
           id="flexSwitchCheckChecked"
+          formControlName="visible"
           checked
         />
+        <label class="form-check-label" for="flexSwitchCheckChecked"
+          >Zichtbaar voor anderen</label
+        >
       </div>
     </div>
     <div class="wrapper-category btn mb-3">
