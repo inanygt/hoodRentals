@@ -16,6 +16,7 @@ import {
   Validators,
 } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
+import { SimpCategoriesComponent } from '../simp-categories/simp-categories.component';
 
 @Component({
   selector: 'app-add-item',
@@ -34,7 +35,8 @@ export class AddItemComponent implements OnInit {
     public itemService: ItemService,
     public activeModal: NgbActiveModal,
     private http: HttpClient,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private modalService: NgbModal
   ) {
     this.addItemForm = this.fb.group({
       title: ['', Validators.required],
@@ -63,5 +65,14 @@ export class AddItemComponent implements OnInit {
 
   onFontStyleChange(event: any) {
     this.selectedToggleBtn = event.value;
+  }
+
+  // Modal
+  open() {
+    const modalOptions: NgbModalOptions = {
+      centered: true,
+      size: 'lg',
+    };
+    this.modalService.open(SimpCategoriesComponent, modalOptions);
   }
 }

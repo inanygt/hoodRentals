@@ -1,0 +1,46 @@
+<div class="modal-header modal-header-profile">
+  <div class="modal-title-profile">
+    <h1>Kies categorie</h1>
+  </div>
+  <button
+    type="button"
+    class="btn-close"
+    aria-label="Close"
+    (click)="activeModal.dismiss('Cross click')"
+  ></button>
+</div>
+<div class="modal-body">
+  <form>
+    <!-- Categories in modal  -->
+    <div class="row">
+      <div
+        *ngFor="let subcategory of subcategory.subcategories"
+        class="col-lg-4 mb-3"
+      >
+        <div class="modal-category">
+          <div
+            class="card-simp-subcategories"
+            (click)="openSubSubCategories(subcategory.id)"
+          >
+            <div class="row g-0">
+              <div class="col-10 d-flex align-items-center">
+                <div class="card-body">
+                  <h3 class="card-custom-title">
+                    {{ subcategory.name }}
+                  </h3>
+                </div>
+              </div>
+              <div
+                class="col-2 col-arrow-right d-flex align-items-center justify-content-center"
+              >
+                <span class="material-symbols-outlined">
+                  arrow_forward_ios
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </form>
+</div>

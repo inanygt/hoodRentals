@@ -48,6 +48,9 @@ import { SignupComponent } from './components/signup/signup.component';
 import { NavComponent } from './components/nav/nav.component';
 import { InstellingComponent } from './components/instelling/instelling.component';
 import { AddItemComponent } from './components/add-item/add-item.component';
+import { SimpCategoriesComponent } from './components/simp-categories/simp-categories.component';
+import { SimpSubcategoriesComponent } from './components/simp-subcategories/simp-subcategories.component';
+import { SimpSubsubcategoriesComponent } from './components/simp-subsubcategories/simp-subsubcategories.component';
 
 @NgModule({
   declarations: [
@@ -76,6 +79,9 @@ import { AddItemComponent } from './components/add-item/add-item.component';
     NavComponent,
     InstellingComponent,
     AddItemComponent,
+    SimpCategoriesComponent,
+    SimpSubcategoriesComponent,
+    SimpSubsubcategoriesComponent,
   ],
   imports: [
     BrowserModule,

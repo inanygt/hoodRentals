@@ -15,10 +15,7 @@ import {
   styleUrls: ['./modal-category.component.css'],
 })
 export class ModalCategoryComponent implements OnInit {
-  // Properties
   categories: any;
-
-  // Methods
 
   constructor(
     private modalService: NgbModal,
