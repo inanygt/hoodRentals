@@ -16,6 +16,7 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
 import { MatButtonToggleModule } from '@angular/material/button-toggle';
+import { MatRadioModule } from '@angular/material/radio';
 
 // Components
 
@@ -95,6 +96,7 @@ import { ChatsComponent } from './components/chats/chats.component';
     MatInputModule,
     MatButtonToggleModule,
     MatListModule,
+    MatRadioModule,
     NgbModule,
     HttpClientModule,
     CommonModule,

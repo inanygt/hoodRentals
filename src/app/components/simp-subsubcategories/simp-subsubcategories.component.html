@@ -10,11 +10,11 @@
   ></button>
 </div>
 <div class="modal-body">
-  <form>
+  <form #myForm="ngForm">
     <!-- Categories in modal  -->
     <div class="row">
       <div
-        *ngFor="let categories of categories.subsubcategory"
+        *ngFor="let category of categories.subsubcategory"
         class="col-lg-4 mb-3"
       >
         <div class="modal-category">
@@ -23,19 +23,18 @@
               <div class="col-10 d-flex align-items-center">
                 <div class="card-body">
                   <h3 class="card-custom-title">
-                    {{ categories.name }}
+                    {{ category.name }}
                   </h3>
                 </div>
               </div>
               <div
-                class="col-2 col-arrow-right d-flex align-items-center justify-content-center"
+                class="col-2 d-flex align-items-center justify-content-center"
               >
-                <input
-                  class="form-check-input"
-                  type="radio"
-                  name="flexRadioDefault"
-                  id="flexRadioDefault1"
-                />
+                <mat-radio-button
+                  (change)="onRadioClick(category.id)"
+                  class="custom-radio-button"
+                  value="{{ category.id }}"
+                ></mat-radio-button>
               </div>
             </div>
           </div>
