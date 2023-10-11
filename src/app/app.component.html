@@ -1,4 +1,7 @@
-<!-- <app-search></app-search> -->
+<div [hidden]="displayNotification" class="alert alert-warning" role="alert">
+  This website is still under construction
+  <div (click)="closeNotification()" class="btn btn-close"></div>
+</div>
 <app-nav></app-nav>
 <router-outlet></router-outlet>
 <app-footer></app-footer>

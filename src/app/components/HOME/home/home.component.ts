@@ -5,10 +5,4 @@ import { Component } from '@angular/core';
   templateUrl: './home.component.html',
   styleUrls: ['./home.component.css'],
 })
-export class HomeComponent {
-  displayNotification: Boolean = false;
-
-  closeNotification() {
-    this.displayNotification = true;
-  }
-}
+export class HomeComponent {}

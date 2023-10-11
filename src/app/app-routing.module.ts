@@ -16,6 +16,7 @@ import {
   redirectUnauthorizedTo,
 } from '@angular/fire/auth-guard';
 import { SignupComponent } from './components/signup/signup.component';
+import { ChatsComponent } from './components/chats/chats.component';
 
 const redirectUnauthorizedToLogin = () => redirectUnauthorizedTo(['']);
 const redirectLoggedInToHome = () => redirectLoggedInTo(['']);
@@ -38,6 +39,7 @@ const routes: Routes = [
   { path: 'search', component: SearchComponent },
   { path: 'voorwaarden', component: VoorwaardenComponent },
   { path: 'profile', component: ProfileComponent },
+  { path: 'chats', component: ChatsComponent },
   {
     path: 'lhome',
     component: LhomeComponent,

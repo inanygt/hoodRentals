@@ -1,5 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { Router } from '@angular/router';
 
 import { ModalCategoryComponent } from '../../MODALS/modal-category/modal-category.component';
 import { ProfileComponent } from '../../MODALS/profile/profile.component';
@@ -22,13 +23,13 @@ import { AddItemComponent } from '../../add-item/add-item.component';
 export class FooterComponent implements OnInit {
   // Methods
   home() {
-    console.log('home');
     window.location.href = '/';
   }
 
   constructor(
     private modalService: NgbModal,
-    public authenticationService: AuthenticationService
+    public authenticationService: AuthenticationService,
+    private router: Router
   ) {}
 
   // open categories modal
@@ -57,5 +58,9 @@ export class FooterComponent implements OnInit {
       size: 'lg',
     };
     this.modalService.open(AddItemComponent, modalOptions);
+  }
+
+  openchats() {
+    this.router.navigate(['/chats']);
   }
 }

@@ -3,10 +3,13 @@
   <!-- Only show if logged in  -->
   <ng-container *ngIf="authenticationService.currentUser$ | async as User">
     <div class="button-group">
-      <i class="fa-solid fa-house logged-in-btns"></i>
-      <i class="fa-regular fa-square-plus logged-in-btns"></i>
-      <i class="fa-regular fa-message logged-in-btns"></i>
-      <i class="fa-solid fa-gear logged-in-btns"></i>
+      <i class="fa-solid fa-house logged-in-btns" (click)="gohome()"></i>
+      <i
+        class="fa-regular fa-square-plus logged-in-btns"
+        (click)="openadditems()"
+      ></i>
+      <i class="fa-regular fa-message logged-in-btns" (click)="openchats()"></i>
+      <i class="fa-solid fa-gear logged-in-btns" (click)="opensettings()"></i>
       <i class="fa-regular fa-user logged-in-btns" routerLink="/profile"></i>
     </div>
   </ng-container>

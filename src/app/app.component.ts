@@ -7,4 +7,10 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'hoodRentals';
+
+  displayNotification: Boolean = false;
+
+  closeNotification() {
+    this.displayNotification = true;
+  }
 }

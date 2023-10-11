@@ -1,0 +1,9 @@
+.card-simp-categories {
+  border-bottom: 0.1px solid lightgray;
+}
+
+input[type="radio"] {
+  width: 1.6rem;
+  height: 1.6rem;
+  border: 1px solid gray;
+}

@@ -51,6 +51,7 @@ import { AddItemComponent } from './components/add-item/add-item.component';
 import { SimpCategoriesComponent } from './components/simp-categories/simp-categories.component';
 import { SimpSubcategoriesComponent } from './components/simp-subcategories/simp-subcategories.component';
 import { SimpSubsubcategoriesComponent } from './components/simp-subsubcategories/simp-subsubcategories.component';
+import { ChatsComponent } from './components/chats/chats.component';
 
 @NgModule({
   declarations: [
@@ -82,6 +83,7 @@ import { SimpSubsubcategoriesComponent } from './components/simp-subsubcategorie
     SimpCategoriesComponent,
     SimpSubcategoriesComponent,
     SimpSubsubcategoriesComponent,
+    ChatsComponent,
   ],
   imports: [
     BrowserModule,
