@@ -17,6 +17,8 @@ import {
 } from '@angular/forms';
 import { HttpClient } from '@angular/common/http';
 import { SimpCategoriesComponent } from '../simp-categories/simp-categories.component';
+import { ShareService } from 'src/app/share.service';
+import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
   selector: 'app-add-item',
@@ -26,17 +28,24 @@ import { SimpCategoriesComponent } from '../simp-categories/simp-categories.comp
 export class AddItemComponent implements OnInit {
   private url = 'http://localhost:8000/api';
   addItemForm: FormGroup;
-
   selected: string = 'huur';
   title: string = '';
+  category: any;
+  categoriesArray: any[];
   selectedToggleBtn: string = '';
+  selectedCategoryId: number = 1;
+  selectedSubCategoryId: number = 1;
+  selectedSubSubCategoryId: number = 1;
+  selectedCategory: string = 'test';
 
   constructor(
     public itemService: ItemService,
     public activeModal: NgbActiveModal,
     private http: HttpClient,
     private fb: FormBuilder,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private shareService: ShareService,
+    private categoryService: CategoryService
   ) {
     this.addItemForm = this.fb.group({
       title: ['', Validators.required],
@@ -48,7 +57,22 @@ export class AddItemComponent implements OnInit {
     });
   }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.selectedCategoryId = this.shareService.getCategoryId();
+    this.selectedSubCategoryId = this.shareService.getSubCategoryId();
+    this.selectedSubSubCategoryId = this.shareService.getSubSubCategoryId();
+    console.log(this.selectedCategoryId);
+    console.log(this.selectedSubCategoryId);
+    console.log(this.selectedSubSubCategoryId);
+    this.categoryService
+      .getSubSubCategories(this.selectedSubCategoryId)
+      .subscribe((res) => {
+        this.categoriesArray = res.subsubcategory;
+        console.log(this.categoriesArray);
+        this.category = this.categoriesArray[this.selectedSubSubCategoryId - 1];
+        console.log(this.category);
+      });
+  }
 
   onSubmit(formData: any) {
     console.log(formData);

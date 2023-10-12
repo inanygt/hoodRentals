@@ -12,6 +12,7 @@ export class ShareService {
 
   setCategoryId(id: number) {
     this.categoryId = id;
+    console.log('the category id is set to: ', this.categoryId);
   }
 
   getCategoryId() {
@@ -20,6 +21,7 @@ export class ShareService {
 
   setSubCategoryId(id: number) {
     this.subCategoryId = id;
+    console.log('the subcategory id is set to: ', this.subCategoryId);
   }
 
   getSubCategoryId() {
@@ -28,6 +30,7 @@ export class ShareService {
 
   setSubSubCategoryId(id: number) {
     this.subSubCategoryId = id;
+    console.log('the subsubcategory id is set to: ', this.subSubCategoryId);
   }
 
   getSubSubCategoryId() {

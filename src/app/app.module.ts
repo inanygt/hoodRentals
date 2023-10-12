@@ -37,7 +37,7 @@ import { BorrowComponent } from './components/HOME/borrow-lend-container/borrow/
 import { LendComponent } from './components/HOME/borrow-lend-container/lend/lend.component';
 import { ParentComponent } from './Testing/parent/parent.component';
 import { ChildComponent } from './Testing/child/child.component';
-import { HorizontalCardsComponent } from './horizontal-cards/horizontal-cards.component';
+import { HorizontalCardsComponent } from './components/horizontal-cards/horizontal-cards.component';
 import { LoginComponent } from './login/login.component';
 import { HotToastModule } from '@ngneat/hot-toast';
 

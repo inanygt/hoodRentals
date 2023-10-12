@@ -8,6 +8,7 @@ import {
 } from '@ng-bootstrap/ng-bootstrap';
 import { CategoryService } from 'src/app/services/category.service';
 import { SimpSubsubcategoriesComponent } from '../simp-subsubcategories/simp-subsubcategories.component';
+import { ShareService } from 'src/app/share.service';
 
 @Component({
   selector: 'app-simp-subcategories',
@@ -15,22 +16,22 @@ import { SimpSubsubcategoriesComponent } from '../simp-subsubcategories/simp-sub
   styleUrls: ['./simp-subcategories.component.css'],
 })
 export class SimpSubcategoriesComponent implements OnInit {
-  subcategory: any;
+  subcategory: any = '';
   constructor(
     public categoryService: CategoryService,
     public activeModal: NgbActiveModal,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private shareService: ShareService
   ) {}
   ngOnInit(): void {
     const id = 1;
     this.categoryService.getCategoryData(id).subscribe((res) => {
-      console.log(res);
       this.subcategory = res;
     });
   }
 
   openSubSubCategories(id: number) {
-    console.log(id);
+    this.shareService.setSubCategoryId(id);
     const modalOptions: NgbModalOptions = {
       centered: true,
       size: 'lg',

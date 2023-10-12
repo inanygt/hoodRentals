@@ -9,6 +9,7 @@ import {
   NgbModalOptions,
 } from '@ng-bootstrap/ng-bootstrap';
 import { SimpSubcategoriesComponent } from '../simp-subcategories/simp-subcategories.component';
+import { ShareService } from 'src/app/share.service';
 
 @Component({
   selector: 'app-simp-categories',
@@ -16,12 +17,13 @@ import { SimpSubcategoriesComponent } from '../simp-subcategories/simp-subcatego
   styleUrls: ['./simp-categories.component.css'],
 })
 export class SimpCategoriesComponent implements OnInit {
-  categories: any;
+  categories: any = '';
 
   constructor(
     private CategoryService: CategoryService,
     public activeModal: NgbActiveModal,
-    private modalService: NgbModal
+    private modalService: NgbModal,
+    private shareService: ShareService
   ) {}
 
   ngOnInit(): void {
@@ -31,7 +33,7 @@ export class SimpCategoriesComponent implements OnInit {
   }
 
   openCategory(id: number) {
-    console.log(id);
+    this.shareService.setCategoryId(id);
     const modalOptions: NgbModalOptions = {
       centered: true,
       size: 'lg',
